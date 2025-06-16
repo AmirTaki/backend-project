@@ -5,6 +5,7 @@ $TablesMenu = readTable ("asus", "SELECT * FROM asus.menu WHERE status = 10", $s
 $TableMegaMenu =  readTable ("asus", "SELECT * FROM  asus.megamenu WHERE status = 10", $single = false, $execute = null);
 $TableCategory =  readTable ("asus", "SELECT * FROM  asus.category WHERE status = 10", $single = false, $execute = null);
 $TableSeries =  readTable ("asus", "SELECT * FROM  asus.series WHERE status = 10", $single = false, $execute = null);
+$TableImg =  readTable ("asus", "SELECT * FROM  asus.img_menu WHERE status = 10", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -91,14 +92,14 @@ $TableSeries =  readTable ("asus", "SELECT * FROM  asus.series WHERE status = 10
                                 <!-- IMAGE CONATAINER  -->
                                 <div class = "imageContainer">
                                     <!-- foreach  -->
+                                    <?php foreach($TableImg as $img){ 
+                                        if($img->list === $list->list && $img->title === $menu->title){    
+                                    ?>
                                     <div class = "imageItem">
-                                        <img src="https://picsum.photos/200" alt="">
-                                        <div class = "captionImage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, dolor!</div>
+                                        <img src="<?= $img->image ?>" alt="">
+                                        <div class = "captionImage"><?= $img->body ?></div>
                                     </div>
-                                    <div class = "imageItem">
-                                        <img src="https://picsum.photos/200" alt="">
-                                        <div class = "captionImage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, dolor!</div>
-                                    </div>
+                                    <?php }} ?>
                                 </div>                               
                             </div>
                         </div>
