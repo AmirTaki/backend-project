@@ -30,7 +30,7 @@ for(let i = 0; i < listTitle.length; i++){
         if(window.innerWidth >= 750){
             ClosePageContainer()
             // listContainer[i].style.display = "flex"
-            // pageContainer[i].style.display = "flex"
+            pageContainer[i].style.display = "flex"
         }
     })
 }
