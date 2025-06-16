@@ -3,6 +3,7 @@ require_once "./functions/helprs.php";
 require_once "./functions/pdo_connection.php";
 $TablesMenu = readTable ("asus", "SELECT * FROM asus.menu WHERE status = 10", $single = false, $execute = null);
 $TableMegaMenu =  readTable ("asus", "SELECT * FROM  asus.megamenu WHERE status = 10", $single = false, $execute = null);
+$TableCategory =  readTable ("asus", "SELECT * FROM  asus.category WHERE status = 10", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,10 +64,14 @@ $TableMegaMenu =  readTable ("asus", "SELECT * FROM  asus.megamenu WHERE status 
                                         title
                                     </div>
                                     <!-- foreach -->
+                                    <?php foreach($TableCategory as $category) {
+                                        if($category->list === $list->list && $category->title === $menu->title){    
+                                    ?>
                                     <div class = "categoryItem">
-                                        <div><i class="bi bi-list"></i></div>
-                                        <div>category</div>
+                                        <div><i class="<?= $category->sign ?>"></i></div>
+                                        <div><?= $category->category ?></div>
                                     </div>
+                                    <?php }} ?>
                                 </div>
                                 <!-- PRODUCT CONTAINER -->
                                 <div class = "productContainer">
