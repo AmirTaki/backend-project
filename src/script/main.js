@@ -17,6 +17,20 @@ iconMenu.addEventListener("click", (e)=>{
 crossSideBar.addEventListener("click", (e)=>{
     menuContainer.style.animation = "moveReverseSidebar .5s linear forwards"
 })
+// 
+function ClosePageContainer () {
+    for (let i = 0; i < pageContainer.length ; i++){
+        pageContainer[i].style.display = "none"
+    }
+}
+for(let i = 0; i < listTitle.length; i++){
+    listTitle[i].addEventListener("mousemove",(e)=>{
+        if(window.innerWidth >= 750){
+            ClosePageContainer()
+            pageContainer[i].style.display = "flex"
+        }
+    })
+}
 // MOVE ANIMATION CONATAINER PAGE SIDEBAR
 for(let i = 0; i < listTitle.length; i++){
     listTitle[i].addEventListener("click", (e)=>{
