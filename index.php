@@ -2,6 +2,7 @@
 require_once "./functions/helprs.php";
 require_once "./functions/pdo_connection.php";
 $TablesMenu = readTable ("asus", "SELECT * FROM asus.menu WHERE status = 10", $single = false, $execute = null);
+$TableMegaMenu =  readTable ("asus", "SELECT * FROM  asus.megamenu WHERE status = 10", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,9 +38,11 @@ $TablesMenu = readTable ("asus", "SELECT * FROM asus.menu WHERE status = 10", $s
                 <!-- LIST CONATINAER -->
                 <div class = "listContainer">
                     <!-- foreach -->
+                    <?php foreach($TableMegaMenu as $list) { 
+                        if($list->title === $menu->title) {?>
                     <div class = "listItem">
                         <div class = "listTitle">
-                            <div>list</div>
+                            <div><?= $list->list ?></div>
                             <div class="arrowRigthTitle"><i class="bi bi-chevron-right"></i></div>
                         </div>
                         <!--  CONTAINER -->
@@ -90,6 +93,7 @@ $TablesMenu = readTable ("asus", "SELECT * FROM asus.menu WHERE status = 10", $s
                             </div>
                         </div>
                     </div>
+                    <?php }} ?>
                 </div>
             </div>     
             <?php } ?>         
