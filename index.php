@@ -4,6 +4,7 @@ require_once "./functions/pdo_connection.php";
 $TablesMenu = readTable ("asus", "SELECT * FROM asus.menu WHERE status = 10", $single = false, $execute = null);
 $TableMegaMenu =  readTable ("asus", "SELECT * FROM  asus.megamenu WHERE status = 10", $single = false, $execute = null);
 $TableCategory =  readTable ("asus", "SELECT * FROM  asus.category WHERE status = 10", $single = false, $execute = null);
+$TableSeries =  readTable ("asus", "SELECT * FROM  asus.series WHERE status = 10", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,9 +80,13 @@ $TableCategory =  readTable ("asus", "SELECT * FROM  asus.category WHERE status 
                                         title
                                     </div>
                                     <!-- foreach -->
+                                    <?php foreach($TableSeries as $series){
+                                        if($series->list === $list->list && $series->title === $menu->title){
+                                    ?>
                                     <div class = "productItem">
-                                        product
+                                        <?= $series->series ?>
                                     </div>
+                                    <?php }} ?>
                                 </div>
                                 <!-- IMAGE CONATAINER  -->
                                 <div class = "imageContainer">
