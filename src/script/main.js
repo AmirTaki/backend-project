@@ -35,14 +35,15 @@ for(let i = 0; i < listTitle.length; i++){
     })
 }
 // // new test
-// for(let i = 0; i < itemTitle.length ;i++){
-//     itemTitle[i].addEventListener("mousemove",(e)=>{
-//         if(window.innerWidth >= 750){
-//             console.log(pageContainer.length)
-//             console.log(listContainer.length)
-//         }
-//     })
-// }
+for(let i = 0; i < itemTitle.length ;i++){
+    itemTitle[i].addEventListener("mousemove",(e)=>{
+        if(window.innerWidth >= 750){
+            let x = listContainer[i].querySelectorAll(".pageContainer")
+            x[i].style.display = "flex"
+
+        }
+    })
+}
 // MOVE ANIMATION CONATAINER PAGE SIDEBAR
 for(let i = 0; i < listTitle.length; i++){
     listTitle[i].addEventListener("click", (e)=>{
