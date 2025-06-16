@@ -1,5 +1,7 @@
 let iconMenu = document.querySelector('.iconMenu')
 let menuContainer = document.querySelector(".menuContainer")
+let itemTitle = document.querySelectorAll(".itemTitle")
+let listContainer = document.querySelectorAll('.listContainer')
 let crossSideBar = document.querySelector(".crossSideBar")
 let listTitle = document.querySelectorAll('.listTitle')
 let pageContainer = document.querySelectorAll('.pageContainer')
@@ -27,10 +29,20 @@ for(let i = 0; i < listTitle.length; i++){
     listTitle[i].addEventListener("mousemove",(e)=>{
         if(window.innerWidth >= 750){
             ClosePageContainer()
-            pageContainer[i].style.display = "flex"
+            // listContainer[i].style.display = "flex"
+            // pageContainer[i].style.display = "flex"
         }
     })
 }
+// // new test
+// for(let i = 0; i < itemTitle.length ;i++){
+//     itemTitle[i].addEventListener("mousemove",(e)=>{
+//         if(window.innerWidth >= 750){
+//             console.log(pageContainer.length)
+//             console.log(listContainer.length)
+//         }
+//     })
+// }
 // MOVE ANIMATION CONATAINER PAGE SIDEBAR
 for(let i = 0; i < listTitle.length; i++){
     listTitle[i].addEventListener("click", (e)=>{
@@ -96,7 +108,7 @@ window.addEventListener('resize', (e)=>{
     }
     else {
         menuContainer.style.display = "flex"
-        pageContainer[0].style.display = "block"//
+        // pageContainer[0].style.display = "block"//
 
     }
 })

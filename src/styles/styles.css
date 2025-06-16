@@ -73,6 +73,7 @@
 .menuItem:hover .listContainer {
     display: block
 }
+
 /* ITEM TITLE */
 .itemTitle{
     background-color: transparent;
@@ -86,6 +87,7 @@
     cursor: pointer;
     border-bottom:  2px solid black;
 }
+
 /* PAGE CONTAINER */
 .pageContainer{
     background-color: rgb(247, 247, 247);
@@ -113,7 +115,7 @@
 /* CATEGORY CONTAINER */
 .categoryContainer{
     background-color: transparent;
-    width: 33.3%;
+    width: 330px;
     /* min-width: 300px; */
     border-right: 1px solid rgb(228, 228, 228); ;
 
@@ -148,7 +150,7 @@
 .productContainer{
     background-color: transparent;
     border-right: 1px solid rgb(228, 228, 228); ;
-    width: 33.3%;
+    width: 330px;
     /* min-width: 300px; */
 }
 /* PRODUCT TITLE */
@@ -179,7 +181,7 @@
     border-right: 1px solid rgb(228, 228, 228); ;
     background-color: transparent;
     border-right: 1px solid rgb(230, 230, 230) ; 
-    width: 33.3%;
+    width: 330px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
