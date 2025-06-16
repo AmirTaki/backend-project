@@ -1,3 +1,8 @@
+<?php 
+require_once "./functions/helprs.php";
+require_once "./functions/pdo_connection.php";
+$TablesMenu = readTable ("asus", "SELECT * FROM asus.menu WHERE status = 10", $single = false, $execute = null);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,9 +28,10 @@
                 <div class = "crossSideBar"><i class="bi bi-x-lg"></i></div>
             </div>
             <!-- foreach -->
+            <?php foreach($TablesMenu as $menu){ ?>
             <div class = "menuItem">
                 <div class = "itemTitle">
-                    <div>item</div>
+                    <div><?=  $menu->title ?></div>
                     <div class = "arrowTitle"><i class="bi bi-chevron-down"></i></div>
                 </div>
                 <!-- LIST CONATINAER -->
@@ -85,7 +91,8 @@
                         </div>
                     </div>
                 </div>
-            </div>              
+            </div>     
+            <?php } ?>         
         </div>
         <!-- SEARCH HEADER & ICON -->
         <div class = "searchHeader">
