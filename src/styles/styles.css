@@ -47,6 +47,7 @@
     background-color: rgb(247, 247, 247);
     position: fixed;
     left: 0;
+    padding-left: 100px;
     height: 600px;
     top:50px;
     width: 25%;
@@ -92,6 +93,7 @@
 .pageContainer{
     background-color: rgb(247, 247, 247);
     position: fixed;
+    padding-right: 100px; 
     left : 25%;
     top:50px;
     width: 75%;
@@ -116,8 +118,7 @@
 /* CATEGORY CONTAINER */
 .categoryContainer{
     background-color: transparent;
-    width: 330px;
-    /* min-width: 300px; */
+    width: 300px;
     border-right: 1px solid rgb(228, 228, 228); ;
 
 }
@@ -151,7 +152,7 @@
 .productContainer{
     background-color: transparent;
     border-right: 1px solid rgb(228, 228, 228); ;
-    width: 330px;
+    width: 300px;
     /* min-width: 300px; */
 }
 /* PRODUCT TITLE */
@@ -179,10 +180,9 @@
 }
 /*  IMAGE CONTAINER */
 .imageContainer{
-    border-right: 1px solid rgb(228, 228, 228); ;
     background-color: transparent;
-    border-right: 1px solid rgb(230, 230, 230) ; 
-    width: 330px;
+    /* border-right: 1px solid rgb(230, 230, 230) ;  */
+    width: 300px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
@@ -391,6 +391,7 @@
         padding-top: 0;
         height: auto;
         border: none;
+        padding-left: 0;
     }
     
     /* ARROW RIGHT TITLE */
@@ -432,6 +433,7 @@
         width: 100%;
         height: 100%;
         display: none;
+        padding-right: 0;
         flex-flow: column nowrap;
     }
     /* PAGE CONTAINER ANIMATION */

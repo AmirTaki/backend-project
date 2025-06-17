@@ -19,13 +19,14 @@ iconMenu.addEventListener("click", (e)=>{
 crossSideBar.addEventListener("click", (e)=>{
     menuContainer.style.animation = "moveReverseSidebar .5s linear forwards"
 })
-// 
+// ClosePageContainer & changaBackground listTitle
 function ClosePageContainer () {
     for (let i = 0; i < pageContainer.length ; i++){
         pageContainer[i].style.display = "none"
         listTitle[i].style.backgroundColor = "transparent"
     }
 }
+// THOUCH MOVE LIST TITLE & BACKGROUND COLOR LIST TITLE
 for(let i = 0; i < listTitle.length; i++){
     listTitle[i].addEventListener("mousemove",(e)=>{
         if(window.innerWidth >= 750){
@@ -35,10 +36,11 @@ for(let i = 0; i < listTitle.length; i++){
         }
     })
 }
-// // new test
+// PAGE CONTAINER TOUCH MOVE ITEM TITLE & COLOR BACKGROUND ITEM
 for(let i = 0; i < itemTitle.length ;i++){
     itemTitle[i].addEventListener("mousemove",(e)=>{
         if(window.innerWidth >= 750){
+            ClosePageContainer()
             // PAGE CONTAINER
             let x = listContainer[i].querySelectorAll(".pageContainer")
             x[0].style.display = "flex"
