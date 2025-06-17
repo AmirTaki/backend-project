@@ -38,9 +38,12 @@ for(let i = 0; i < listTitle.length; i++){
 for(let i = 0; i < itemTitle.length ;i++){
     itemTitle[i].addEventListener("mousemove",(e)=>{
         if(window.innerWidth >= 750){
+            // PAGE CONTAINER
             let x = listContainer[i].querySelectorAll(".pageContainer")
             x[0].style.display = "flex"
-
+            // COLOR BACKGROUND ITEM
+            let color = listContainer[i].querySelectorAll(".listTitle")
+            color[0].style.backgroundColor = "rgb(226, 226, 226)"
         }
     })
 }
