@@ -63,7 +63,7 @@ $TableImg =  readTable ("asus", "SELECT * FROM  asus.img_menu WHERE status = 10"
                                 <!-- CATEGORY CONTAINER -->
                                 <div class = "categoryContainer">
                                     <div class = "categoryTitle">
-                                        title
+                                        CATEGORY
                                     </div>
                                     <!-- foreach -->
                                     <?php foreach($TableCategory as $category) {
@@ -78,7 +78,7 @@ $TableImg =  readTable ("asus", "SELECT * FROM  asus.img_menu WHERE status = 10"
                                 <!-- PRODUCT CONTAINER -->
                                 <div class = "productContainer">
                                     <div class = "productTitle">
-                                        title
+                                        SERIES
                                     </div>
                                     <!-- foreach -->
                                     <?php foreach($TableSeries as $series){
