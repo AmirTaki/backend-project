@@ -23,14 +23,15 @@ crossSideBar.addEventListener("click", (e)=>{
 function ClosePageContainer () {
     for (let i = 0; i < pageContainer.length ; i++){
         pageContainer[i].style.display = "none"
+        listTitle[i].style.backgroundColor = "transparent"
     }
 }
 for(let i = 0; i < listTitle.length; i++){
     listTitle[i].addEventListener("mousemove",(e)=>{
         if(window.innerWidth >= 750){
             ClosePageContainer()
-            // listContainer[i].style.display = "flex"
             pageContainer[i].style.display = "flex"
+            listTitle[i].style.backgroundColor = "rgb(226, 226, 226)"
         }
     })
 }
