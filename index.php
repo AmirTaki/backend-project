@@ -53,7 +53,7 @@ $TableImg =  readTable ("asus", "SELECT * FROM  asus.img_menu WHERE status = 10"
                             <div class = "crossBack">
                                 <div class = "backCountaienr">
                                     <div class = "backIcon"><i class="bi bi-chevron-left"></i></div>
-                                    <div>back</div>
+                                    <div><?= $list->list ?></div>
                                 </div>
                                 <div class = "crossContainer-sidebar">
                                     <div><i class="bi bi-x-lg"></i></div>
