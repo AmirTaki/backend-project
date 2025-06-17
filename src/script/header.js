@@ -1,0 +1,121 @@
+let iconMenu = document.querySelector('.iconMenu')
+let menuContainer = document.querySelector(".menuContainer")
+let itemTitle = document.querySelectorAll(".itemTitle")
+let listContainer = document.querySelectorAll('.listContainer')
+let crossSideBar = document.querySelector(".crossSideBar")
+let listTitle = document.querySelectorAll('.listTitle')
+let pageContainer = document.querySelectorAll('.pageContainer')
+let backCountaienr = document.querySelectorAll(".backCountaienr")
+let crossContainerSidebar = document.querySelectorAll('.crossContainer-sidebar')
+let searchInputIcon = document.querySelector("#searchIcon")
+let InputSearchHeader = document.querySelector(".InputSearchHeader")
+
+// MOVE ANIMATION SIDEBAR
+iconMenu.addEventListener("click", (e)=>{
+    menuContainer.style.display = "flex"
+    menuContainer.style.animation = "moveSidebar .5s linear forwards"
+})
+// REVERSE MOVE ANIMATIO SIDEBAR
+crossSideBar.addEventListener("click", (e)=>{
+    menuContainer.style.animation = "moveReverseSidebar .5s linear forwards"
+})
+// ClosePageContainer & changaBackground listTitle
+function ClosePageContainer () {
+    for (let i = 0; i < pageContainer.length ; i++){
+        pageContainer[i].style.display = "none"
+        listTitle[i].style.backgroundColor = "transparent"
+    }
+}
+// THOUCH MOVE LIST TITLE & BACKGROUND COLOR LIST TITLE
+for(let i = 0; i < listTitle.length; i++){
+    listTitle[i].addEventListener("mousemove",(e)=>{
+        if(window.innerWidth >= 750){
+            ClosePageContainer()
+            pageContainer[i].style.display = "flex"
+            listTitle[i].style.backgroundColor = "rgb(226, 226, 226)"
+        }
+    })
+}
+// PAGE CONTAINER TOUCH MOVE ITEM TITLE & COLOR BACKGROUND ITEM
+for(let i = 0; i < itemTitle.length ;i++){
+    itemTitle[i].addEventListener("mousemove",(e)=>{
+        if(window.innerWidth >= 750){
+            ClosePageContainer()
+            // PAGE CONTAINER
+            let x = listContainer[i].querySelectorAll(".pageContainer")
+            x[0].style.display = "flex"
+            // COLOR BACKGROUND ITEM
+            let color = listContainer[i].querySelectorAll(".listTitle")
+            color[0].style.backgroundColor = "rgb(226, 226, 226)"
+        }
+    })
+}
+// MOVE ANIMATION CONATAINER PAGE SIDEBAR
+for(let i = 0; i < listTitle.length; i++){
+    listTitle[i].addEventListener("click", (e)=>{
+        if(window.innerWidth < 750){
+            pageContainer[i].style.display = 'flex'
+            pageContainer[i].style.animation = "movePageContainer .5s linear forwards"
+        }
+    })
+}
+// MOVE REVERSE ANIMATION CONATAINER PAGE SIDEBAR
+for(let i = 0; i < backCountaienr.length; i++){
+    backCountaienr[i].addEventListener("click", (e)=>{
+        pageContainer[i].style.animation = "moveReversePageContainer .5s linear forwards"  
+        setTimeout(() => {
+            pageContainer[i].style.display = 'none'
+        }, 500);
+       
+    })
+}
+// FUNCTION DISPLAY NONE PAGECONTAINER
+const closePageContainerSidebar = () => {
+    for(let i = 0; i < pageContainer.length; i++){
+    pageContainer[i].style.display = "none"
+    }
+}
+// CLOSE CONTAINER SIDEBAR AND CLOSE PAGE CONTAINER
+for(let i = 0; i < crossContainerSidebar.length; i++){
+    crossContainerSidebar[i].addEventListener("click", (e)=>{
+        pageContainer[i].style.animation = "moveReversePageContainer .2s linear forwards"  
+        setTimeout(() => {
+            pageContainer[i].style.display = 'none'
+        },200);
+        menuContainer.style.animation = "moveReverseSidebar .5s linear forwards"
+    })
+}
+//
+InputSearchHeader.style.display = "none" 
+searchInputIcon.addEventListener("click", (e)=>{
+    if(InputSearchHeader.style.display == "none"){
+        InputSearchHeader.style.display = "block"
+        InputSearchHeader.style.animation = "moveInput .5s linear forwards"
+    }
+    else{
+        InputSearchHeader.style.animation = "moveReverseInput .5s linear forwards"
+        setTimeout(() => {
+            InputSearchHeader.style.display = "none"
+        },500);
+   }
+})
+//   FOCUS INPUT SEARCH HIDE ICON SEARCH
+InputSearchHeader.addEventListener("focus", (e)=>{
+    searchInputIcon.style.display = "none" 
+})
+//   FOCUS OUT INPUT SEARCH DISPLAY ICON SEARCH
+InputSearchHeader.addEventListener("focusout", (e)=>{
+    searchInputIcon.style.display = "block" 
+})
+// WINDOW ADD EVENET RESIZE 
+window.addEventListener('resize', (e)=>{
+    if(window.innerWidth < 750){
+        menuContainer.style.display = "none"
+        closePageContainerSidebar()//
+    }
+    else {
+        menuContainer.style.display = "flex"
+        // pageContainer[0].style.display = "block"//
+
+    }
+})

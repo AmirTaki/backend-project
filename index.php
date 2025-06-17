@@ -12,7 +12,11 @@ $TableImg =  readTable ("asus", "SELECT * FROM  asus.img_menu WHERE status = 10"
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/styles/styles.css">
+    <!-- header -->
+    <link rel="stylesheet" href="./src/styles/header.css">
+    <!-- main -->
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <!-- bootstrap 5 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>Project</title>
   
@@ -21,6 +25,9 @@ $TableImg =  readTable ("asus", "SELECT * FROM  asus.img_menu WHERE status = 10"
     <header>
         <?php require_once "./layouts/navbar.php" ?>
     </header>
+    <!-- header -->
+    <script src = "./src/script/header.js"></script>
+    <!-- main -->
     <script src = "./src/script/main.js"></script>
 </body>
 </html>
