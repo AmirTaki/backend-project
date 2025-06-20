@@ -49,24 +49,88 @@ $TableGridImg =  readTable ("asus", "SELECT * FROM asus.grid_img WHERE status = 
                 <?php } ?>
             </div>
         </div>
-    <!--    =========================================================  CLASIFIER CONTAINER  ===================================================== -->
-    <div class = "clasifierContainer">
-    <!-- foreach -->
-    <?php foreach($TableGridImg as $item){ ?>
-        <div class = "clasifierItem">
-            <img src="<?= $item->path ?>" alt="">
-            <div class = "clasifierCaption">
-                <div class = "clasifierCaptionTitle"><?= $item->name ?></div>
-                <div class = "clasifierCaptionBody">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, impedit.</div>
-                <div class = "clasifierCaptionIcon">
-                    <div  class ="titleIcon" >icon</div>
-                    <div class = "iconGirdCaption">icon</div>
+        <!--    =========================================================  CLASIFIER CONTAINER  ===================================================== -->
+        <div class = "clasifierContainer">
+            <!-- foreach -->
+            <?php foreach($TableGridImg as $item){ ?>
+                <div class = "clasifierItem">
+                    <img src="<?= $item->path ?>" alt="">
+                    <div class = "clasifierCaption">
+                        <div class = "clasifierCaptionTitle"><?= $item->name ?></div>
+                        <div class = "clasifierCaptionBody">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, impedit.</div>
+                        <div class = "clasifierCaptionIcon">
+                            <div  class ="titleIcon" >icon</div>
+                            <div class = "iconGirdCaption">icon</div>
+                        </div>
+                        <button class = "clasifierCaptionButton">button</button>   
+                    </div>
                 </div>
-                <button class = "clasifierCaptionButton">button</button>   
+            <?php } ?>
+        </div>
+        <!--  -->
+        <div class = "boxSliderImage">
+            <div class = "containerSliderImg">
+                <!-- for(let i = 0; i < container.sizeof; i += 3){
+                    img "<?= conianer[i] ?>"
+                    img "<?= conianer[i+1] ?>"
+                    img "<?= conianer[i+2] ?>"
+                } -->
+                <div class = "containerItemColumnOne">
+                    <div class = "itemImg">
+                        <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
+                        <div class = "captionItemSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, placeat.</div>
+                    </div>
+                    <div class = "itemImg">
+                        <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
+                        <div class = "captionItemSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, placeat.</div>
+                    </div>
+                    <div class = "itemImg">
+                        <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
+                        <div class = "captionItemSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, placeat.</div>
+
+                    </div>
+                </div>
+                    <!-- for(let i = 0; i < container.sizeof; i += 2){
+                    img "<?= conianer[i] ?>"
+                    img "<?= conianer[i+1] ?>"
+                } -->
+                <div class = "containerItemColumnTwo">
+                    <div class = "itemImg">
+                        <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
+                        <div class = "captionItemSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, placeat.</div>
+                    </div>
+                    <div class = "itemImg">
+                        <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
+                        <div class = "captionItemSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, placeat.</div>
+                    </div>
+                </div>
+                
+                
+                <!-- foreach  -->
+                <div class = "containerItemColumnThree">
+                    <div class = "itemImg">
+                        <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
+                        <div class = "captionItemSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, placeat.</div>
+                    </div>
+                </div>
+            
+            </div>
+            <div id = "clickLeftSlider">left</div>
+            <div id = "clickRightSlider">right</div>
+            <div class = "containerButton">
+                <div class = "itembutton"></div>
+                <div class = "itembutton"></div>
+                <div class = "itembutton"></div>
+            </div>
+            <div class = "containerButtonClick">
+                <div class = "itembuttonclick"></div>
+                <div class = "itembuttonclick"></div>
+                <div class = "itembuttonclick"></div>
+                <div class = "itembuttonclick"></div>
+                <div class = "itembuttonclick"></div>
+                <div class = "itembuttonclick"></div>
             </div>
         </div>
-    <?php } ?>
-</div>
     </main>
     <!-- header -->
     <script src = "./src/script/header.js"></script>
