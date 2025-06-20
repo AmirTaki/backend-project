@@ -92,12 +92,14 @@ const scrollBehaviorContainerSliderImage = () => {
    containerSliderImg.scrollLeft = 0  
 }
 
-
 // WINDOW RESIZE EVENT LISTENER
 window.addEventListener('resize', (e)=>{
    /* ==================================================  CONTAINER SLIDER IMAGE  =========================================================== */
+    hideShowClickLeftRigth() 
     scrollBehaviorContainerSliderImage()
     changeBackGroundColorButton (itembutton, option = "first", color = "blue")
     changeBackGroundColorButton (itembuttonclick, option = 'first', color = " rgba(252, 5, 5, 0.655)" )
-    hideShowClickLeftRigth()
+  
+
+    
 })

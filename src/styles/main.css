@@ -342,7 +342,7 @@
     }
     /* CLICK LEFT * CLICK RIGHT SLIDER */
     #clickLeftSlider, #clickRightSlider {
-        display: none;
+        display: none !important;
     }
     /* CONTAINER ITEM COLUMN ONE */
     .containerItemColumnOne {
@@ -385,7 +385,7 @@
     }
     /* CLICK LEFT & CLICK RIGHT SLIDER */
     #clickLeftSlider, #clickRightSlider {
-        display: none;
+        display: none !important;
     }
     /* CONTAINER ITEM COLUMN ONE , TWO */
     .containerItemColumnOne, .containerItemColumnTwo{
@@ -433,6 +433,10 @@
     }
     /*  CONTAINER SCROLL WEBKIT SCROLLBAR */
     .containerScroll::-webkit-scrollbar{
+        display: none;
+    }
+    /* CLICK LEFT & CLICK RIGHT SLIDER */
+    #clickLeftSlider, #clickRightSlider {
         display: none;
     }
     /* CONTAINER SCROOL */
