@@ -114,18 +114,14 @@ $TableMoveImg =  readTable ("asus", "SELECT * FROM asus.move_img WHERE status = 
             <div id = "clickLeftSlider">left</div>
             <div id = "clickRightSlider">right</div>
             <div class = "containerButton">
-                
-                <div class = "itembutton"></div>
-                <div class = "itembutton"></div>
-                <div class = "itembutton"></div>
+                <?php for($i = 0; $i < sizeof($TableMoveImg) ; $i += 2) { ?>
+                    <div class = "itembutton"></div>
+                <?php } ?>
             </div>
             <div class = "containerButtonClick">
-                <div class = "itembuttonclick"></div>
-                <div class = "itembuttonclick"></div>
-                <div class = "itembuttonclick"></div>
-                <div class = "itembuttonclick"></div>
-                <div class = "itembuttonclick"></div>
-                <div class = "itembuttonclick"></div>
+                <?php foreach ($TableMoveImg as $item){ ?>
+                    <div class = "itembuttonclick"></div>
+                <?php } ?>
             </div>
         </div>
     </main>
