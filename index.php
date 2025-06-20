@@ -20,7 +20,7 @@ $TableMoveImg =  readTable ("asus", "SELECT * FROM asus.move_img WHERE status = 
     <!-- main -->
     <link rel="stylesheet" href="./src/styles/main.css">
     <!-- bootstrap 5 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> -->
     <title>Project</title>
   
 </head>

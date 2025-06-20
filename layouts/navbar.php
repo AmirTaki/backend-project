@@ -19,7 +19,7 @@
                 <div class = "arrowTitle"><i class="bi bi-chevron-down"></i></div>
             </div>
             <!-- LIST CONATINAER -->
-            <div class = "BOX SLIDER IMAGE">
+            <div class = "listContainer">
                 <!-- foreach -->
                 <?php foreach($TableMegaMenu as $list) { 
                     if($list->title === $menu->title) {?>
