@@ -25,6 +25,26 @@ $TableImg =  readTable ("asus", "SELECT * FROM  asus.img_menu WHERE status = 10"
     <header>
         <?php require_once "./layouts/navbar.php" ?>
     </header>
+    <main>
+        <div class = "scroller-grig-img" >
+            <div class = "iconLeftScrollImg">icon left</div>
+            <div class = "iconRigthtScrollImg">icon right</div>
+            <div class = "containerScroll">
+                <!-- foreach -->
+                <div class = "containerScrollImage">
+                    <div>
+                        <div class = "containerScrollImageIcon">icon</div>
+                        <img src="C:\Users\ASUS\Desktop\backup_img\photo-1511745990576-dbb681861dc7.jpg" alt="">
+                    </div>
+                    <div class = "containerScrollCaption">
+                        <div class = "containerScrollCaptionTitle">title</div>
+                        <div class = "containerScrollCaptionBody">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur veniam optio quod?</div>
+                        <div class = "containerScrollCaptionPerfomance">performance</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     <!-- header -->
     <script src = "./src/script/header.js"></script>
     <!-- main -->

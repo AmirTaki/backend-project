@@ -2,7 +2,7 @@
 <div class = "header">
     <!-- ICON MENU -->
     <div class = "iconMenu">
-        <i class="bi bi-list"></i>
+        <i class="bi bi-list">menu</i>
     </div>
     <!-- LOGO -->
     <div>logo</div>
