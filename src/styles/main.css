@@ -1,8 +1,9 @@
 /*    =========================================================  CONTAINER GRID IMAGE : IMG   ===================================================== */
-.scroller-grig-img{
+.scroller-grid-img{
     display: flex;
     justify-content: center;
     position: relative;
+    background-color: rgb(255, 255, 255);
     align-items: center;
 }
 /* ICON LEFT SCROLL CONTAINER */
@@ -34,7 +35,7 @@
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-flow: row nowrap ;
-    justify-content: center;
+    /* justify-content: center; */
     overflow-x: scroll;
     margin: 10px;
     height: 100%;

@@ -27,7 +27,7 @@ $TableScrollerImage =  readTable ("adidas", "SELECT * FROM adidas.scrollerimg_ma
         <?php require_once "./layouts/navbar.php" ?>
     </header>
     <main>
-        <div class = "scroller-grig-img" >
+        <div class = "scroller-grid-img" >
             <div class = "iconLeftScrollImg">icon left</div>
             <div class = "iconRigthtScrollImg">icon right</div>
             <div class = "containerScroll">
