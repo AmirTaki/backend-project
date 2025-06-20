@@ -5,8 +5,11 @@ let containerScroll = document.querySelector(".containerScroll")
 
 // CONTAINER SCROLL IMAGE WHELL
 containerScroll.addEventListener("wheel",(e)=>{
-    e.preventDefault()
-    containerScroll.scrollLeft += e.deltaY ;
+    if(window.innerWidth >=  750){
+        e.preventDefault()
+        containerScroll.scrollLeft += e.deltaY ;
+    }
+  
 })
 // CONTAINER SCROLL IMAGE CLICK LEFT
 iconLeftScrollImg.addEventListener("click",(e)=>{

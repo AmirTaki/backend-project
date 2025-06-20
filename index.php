@@ -6,7 +6,8 @@ $TableMegaMenu =  readTable ("asus", "SELECT * FROM  asus.megamenu WHERE status 
 $TableCategory =  readTable ("asus", "SELECT * FROM  asus.category WHERE status = 10", $single = false, $execute = null);
 $TableSeries =  readTable ("asus", "SELECT * FROM  asus.series WHERE status = 10", $single = false, $execute = null);
 $TableImg =  readTable ("asus", "SELECT * FROM  asus.img_menu WHERE status = 10", $single = false, $execute = null);
-$TableScrollerImage =  readTable ("adidas", "SELECT * FROM adidas.scrollerimg_main", $single = false, $execute = null);
+$TableScrollerImage =  readTable ("adidas", "SELECT * FROM adidas.scrollerimg_main WHERE status = 10", $single = false, $execute = null);
+$TableGridImg =  readTable ("asus", "SELECT * FROM asus.grid_img WHERE status = 10", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,18 +52,20 @@ $TableScrollerImage =  readTable ("adidas", "SELECT * FROM adidas.scrollerimg_ma
     <!--    =========================================================  CLASIFIER CONTAINER  ===================================================== -->
     <div class = "clasifierContainer">
     <!-- foreach -->
-    <div class = "clasifierItem">
-        <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
-        <div class = "clasifierCaption">
-            <div class = "clasifierCaptionTitle">title</div>
-            <div class = "clasifierCaptionBody">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, impedit.</div>
-            <div class = "clasifierCaptionIcon">
-                <div  class ="titleIcon" >icon</div>
-                <div class = "iconGirdCaption">icon</div>
+    <?php foreach($TableGridImg as $item){ ?>
+        <div class = "clasifierItem">
+            <img src="<?= $item->path ?>" alt="">
+            <div class = "clasifierCaption">
+                <div class = "clasifierCaptionTitle"><?= $item->name ?></div>
+                <div class = "clasifierCaptionBody">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, impedit.</div>
+                <div class = "clasifierCaptionIcon">
+                    <div  class ="titleIcon" >icon</div>
+                    <div class = "iconGirdCaption">icon</div>
+                </div>
+                <button class = "clasifierCaptionButton">button</button>   
             </div>
-            <button class = "clasifierCaptionButton">button</button>   
         </div>
-    </div>
+    <?php } ?>
 </div>
     </main>
     <!-- header -->
