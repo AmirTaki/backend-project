@@ -70,56 +70,51 @@ $TableMoveImg =  readTable ("asus", "SELECT * FROM asus.move_img WHERE status = 
         </div>
         <!-- ==================================================   BOX SLIDER IMAGE  ===========================================================  -->
         <div class = "boxSliderImage">
-            <div class = "containerSliderImg">
-                <!-- for(let i = 0; i < container.sizeof; i += 3){
-                    img "<?= conianer[i] ?>"
-                    img "<?= conianer[i+1] ?>"
-                    img "<?= conianer[i+2] ?>"
-                } -->
-                <?php for($i = 0; $i < $TableMoveImg.sizeof(); $i+=3){ ?>
-                <div class = "containerItemColumnOne">
-                    <div class = "itemImg">
-                        <img src="<?= $TableMoveImg[$i]->path ?>" alt="">
-                        <div class = "captionItemSlider"><?= $TableMoveImg[$i]->body ?></div>
+            <div class = "containerSliderImg" >
+                <?php for($i = 0; $i < sizeof($TableMoveImg); $i+=3){ ?>
+                    <div class = "containerItemColumnOne">
+                        <div class = "itemImg">
+                            <img src="<?= $TableMoveImg[$i]->path ?>" alt="">
+                            <div class = "captionItemSlider"><?= $TableMoveImg[$i]->body ?></div>
+                        </div>
+                        <div class = "itemImg">
+                            <img src="<?= $TableMoveImg[$i+1]->path ?>" alt="">
+                            <div class = "captionItemSlider"><?= $TableMoveImg[$i+1]->body ?></div>
+                        </div>
+                        <div class = "itemImg">
+                            <img src="<?= $TableMoveImg[$i+2]->path ?>" alt="">
+                            <div class = "captionItemSlider"><?= $TableMoveImg[$i+2]->body ?></div>
+                        </div>
                     </div>
-                    <div class = "itemImg">
-                        <img src="<?= $TableMoveImg[$i+1]->path ?>" alt="">
-                        <div class = "captionItemSlider"><?= $TableMoveImg[$i+1]->body ?></div>
-                    </div>
-                    <div class = "itemImg">
-                        <img src="<?= $TableMoveImg[$i+2]->path ?>" alt="">
-                        <div class = "captionItemSlider"><?= $TableMoveImg[$i+2]->body ?></div>
-                    </div>
-                </div>
                 <?php } ?>
-                    <!-- for(let i = 0; i < container.sizeof; i += 2){
-                    img "<?= conianer[i] ?>"
-                    img "<?= conianer[i+1] ?>"
-                } -->
-                <div class = "containerItemColumnTwo">
-                    <div class = "itemImg">
-                        <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
-                        <div class = "captionItemSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, placeat.</div>
+             
+                <?php for($i = 0; $i < sizeof($TableMoveImg); $i+=2){ ?>
+                    <div class = "containerItemColumnTwo">
+                        <div class = "itemImg">
+                            <img src="<?= $TableMoveImg[$i]->path  ?>" alt="">
+                            <div class = "captionItemSlider"><?= $TableMoveImg[$i]->body ?></div>
+                        </div>
+                        <div class = "itemImg">
+                            <img src="<?= $TableMoveImg[$i+1]->path  ?>" alt="">
+                            <div class = "captionItemSlider"><?= $TableMoveImg[$i+1]->body ?></div>
+                        </div>
                     </div>
-                    <div class = "itemImg">
-                        <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
-                        <div class = "captionItemSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, placeat.</div>
-                    </div>
-                </div>
-                
+                <?php } ?>
                 
                 <!-- foreach  -->
-                <div class = "containerItemColumnThree">
-                    <div class = "itemImg">
-                        <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
-                        <div class = "captionItemSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, placeat.</div>
+                <?php foreach($TableMoveImg as $item){ ?>
+                    <div class = "containerItemColumnThree">
+                        <div class = "itemImg">
+                            <img src="<?= $item->path ?>" alt="">
+                            <div class = "captionItemSlider"><?= $item->body ?></div>
+                        </div>
                     </div>
-                </div>
-            
+                <?php } ?>
             </div>
             <div id = "clickLeftSlider">left</div>
             <div id = "clickRightSlider">right</div>
             <div class = "containerButton">
+                
                 <div class = "itembutton"></div>
                 <div class = "itembutton"></div>
                 <div class = "itembutton"></div>
