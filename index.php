@@ -67,7 +67,7 @@ $TableGridImg =  readTable ("asus", "SELECT * FROM asus.grid_img WHERE status = 
                 </div>
             <?php } ?>
         </div>
-        <!--  -->
+        <!-- ==================================================   BOX SLIDER IMAGE  ===========================================================  -->
         <div class = "boxSliderImage">
             <div class = "containerSliderImg">
                 <!-- for(let i = 0; i < container.sizeof; i += 3){
