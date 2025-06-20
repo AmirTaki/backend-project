@@ -6,6 +6,7 @@ $TableMegaMenu =  readTable ("asus", "SELECT * FROM  asus.megamenu WHERE status 
 $TableCategory =  readTable ("asus", "SELECT * FROM  asus.category WHERE status = 10", $single = false, $execute = null);
 $TableSeries =  readTable ("asus", "SELECT * FROM  asus.series WHERE status = 10", $single = false, $execute = null);
 $TableImg =  readTable ("asus", "SELECT * FROM  asus.img_menu WHERE status = 10", $single = false, $execute = null);
+$TableScrollerImage =  readTable ("adidas", "SELECT * FROM adidas.scrollerimg_main", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,17 +32,19 @@ $TableImg =  readTable ("asus", "SELECT * FROM  asus.img_menu WHERE status = 10"
             <div class = "iconRigthtScrollImg">icon right</div>
             <div class = "containerScroll">
                 <!-- foreach -->
-                <div class = "containerScrollImage">
-                    <div>
-                        <div class = "containerScrollImageIcon">icon</div>
-                        <img src="C:\Users\ASUS\Desktop\backup_img\photo-1511745990576-dbb681861dc7.jpg" alt="">
+                <?php foreach($TableScrollerImage as $item) { ?>
+                    <div class = "containerScrollImage">
+                        <div>
+                            <div class = "containerScrollImageIcon">icon</div>
+                            <img src="<?= $item->path ?>" alt="">
+                        </div>
+                        <div class = "containerScrollCaption">
+                            <div class = "containerScrollCaptionTitle"><?= $item->price ?></div>
+                            <div class = "containerScrollCaptionBody"><?= $item->body ?></div>
+                            <div class = "containerScrollCaptionPerfomance"><?= $item->title ?></div>
+                        </div>
                     </div>
-                    <div class = "containerScrollCaption">
-                        <div class = "containerScrollCaptionTitle">title</div>
-                        <div class = "containerScrollCaptionBody">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur veniam optio quod?</div>
-                        <div class = "containerScrollCaptionPerfomance">performance</div>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </main>
