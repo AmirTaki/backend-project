@@ -1,0 +1,169 @@
+/*    =========================================================  CONTAINER GRID IMAGE : IMG   ===================================================== */
+.scroller-grig-img{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+/* ICON LEFT SCROLL CONTAINER */
+.iconLeftScrollImg{
+    position: absolute;
+    top : 50%;
+    z-index: 2;
+    color: red;
+    left : 60px;
+    opacity: .2;
+    transition: opacity .5s;
+}
+/* ICON RIGHT SCROLL CONTAINER */
+.iconRigthtScrollImg{
+    position: absolute;
+    top : 50%;
+    z-index: 2;
+    color: red;
+    right : 60px;
+    opacity: .2;
+    transition: opacity .5s;
+}
+.iconLeftScrollImg:hover , .iconRigthtScrollImg:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+/* CONTAINER SCROLL  */
+.containerScroll{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-flow: row nowrap ;
+    justify-content: center;
+    overflow-x: scroll;
+    margin: 10px;
+    height: 100%;
+    padding: 20px;
+    padding-bottom:40px ;
+    width: 90%;
+}
+/*  CONTAINER SCROLL WEBKIT SCROLLBAR */
+.containerScroll::-webkit-scrollbar {
+    width : 5px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 80%);
+}
+.containerScroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 2%);
+}
+.containerScroll::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(0, 0%, 0%);
+    cursor: pointer;
+}
+/*  CONTAINER SCROLL IMAGE */
+.containerScrollImage{
+    min-width:  300px;
+    overflow: hidden;
+    height: 450px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    border: .5px solid rgb(233, 233, 233);
+    background-color: white;
+    position: relative; 
+}
+/*  CONTAINER SCROLL IMAGE ICON */
+.containerScrollImageIcon{
+    position: absolute;
+    right: 10px;
+    top:10px;
+    transition: color .5s;
+    color: gray;
+}
+/*  CONTAINER SCROLL IMAGE ICON : HOVER */
+.containerScrollImageIcon:hover{
+    color: black;
+    cursor: pointer;
+}
+/*  CONTAINER SCROLL IMAGE  IMG */
+.containerScrollImage img {
+    min-width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+/*  CONTAINER SCROLL CAPTION  */
+.containerScrollCaption{
+    background-color: transparent;
+    height: 100%;
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-flow:  column nowrap;
+}
+/*  CONTAINER SCROLL CAPTION  TITLE */
+.containerScrollCaptionTitle{
+    background-color: transparent;
+    padding: 2px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+/*  CONTAINER SCROLL CAPTION BODY */ 
+.containerScrollCaptionBody{
+    background-color: transparent;
+    color:gray;
+    padding: 2px;
+    margin-bottom: 5px;
+}
+/*  CONTAINER SCROLL CAPTION PREFORMANCE  */
+.containerScrollCaptionPerfomance{
+    background-color: transparent;
+    padding: 2px;
+}
+
+/*    ========================================================= @media screen maxx-width : 750px  ===================================================== */
+@media screen and (max-width:750px) {
+    /*    =========================================================  CONTAINER GRID IMAGE : IMG   ===================================================== */
+    /* ICON RIGHT SCROLL CONTAINER  &&  ICON LEFT SCROLL CONTAINER*/
+    .iconLeftScrollImg, .iconRigthtScrollImg{
+        display: none;
+    }
+    /*  CONTAINER SCROLL WEBKIT SCROLLBAR */
+    .containerScroll::-webkit-scrollbar{
+        display: none;
+    }
+    /* CONTAINER SCROOL */
+    .containerScroll{
+        overflow:hidden;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-width: none;
+        place-items: center;
+        background-color: rgb(255, 255, 255);
+        align-items: center;
+        height: 520px;
+        width: 100%;
+        padding: 0;
+    }
+    /* CONTAINER SCROLL IMAGE */
+    .containerScrollImage{
+        min-height: none;
+        background-color: rgb(255, 255, 255);
+        min-width: 210px;
+        height: 240px;
+        border: none;
+        outline: none;
+        overflow:visible;
+    }
+    /* CONTAINER SCROOL IMAGE IMG */
+    .containerScrollImage img{
+        min-width: 210px;
+        object-fit: cover;
+        height: 240px;
+        border-radius:10px ;
+    } 
+    /* CAONTAINER SCROLL CAPTION */
+    .containerScrollCaption{
+        display: none;
+    }
+}
