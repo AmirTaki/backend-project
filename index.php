@@ -48,6 +48,22 @@ $TableScrollerImage =  readTable ("adidas", "SELECT * FROM adidas.scrollerimg_ma
                 <?php } ?>
             </div>
         </div>
+    <!--    =========================================================  CLASIFIER CONTAINER  ===================================================== -->
+    <div class = "clasifierContainer">
+    <!-- foreach -->
+    <div class = "clasifierItem">
+        <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
+        <div class = "clasifierCaption">
+            <div class = "clasifierCaptionTitle">title</div>
+            <div class = "clasifierCaptionBody">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, impedit.</div>
+            <div class = "clasifierCaptionIcon">
+                <div  class ="titleIcon" >icon</div>
+                <div class = "iconGirdCaption">icon</div>
+            </div>
+            <button class = "clasifierCaptionButton">button</button>   
+        </div>
+    </div>
+</div>
     </main>
     <!-- header -->
     <script src = "./src/script/header.js"></script>
