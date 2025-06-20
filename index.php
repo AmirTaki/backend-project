@@ -8,6 +8,7 @@ $TableSeries =  readTable ("asus", "SELECT * FROM  asus.series WHERE status = 10
 $TableImg =  readTable ("asus", "SELECT * FROM  asus.img_menu WHERE status = 10", $single = false, $execute = null);
 $TableScrollerImage =  readTable ("adidas", "SELECT * FROM adidas.scrollerimg_main WHERE status = 10", $single = false, $execute = null);
 $TableGridImg =  readTable ("asus", "SELECT * FROM asus.grid_img WHERE status = 10", $single = false, $execute = null);
+$TableMoveImg =  readTable ("asus", "SELECT * FROM asus.move_img WHERE status = 10", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,21 +76,22 @@ $TableGridImg =  readTable ("asus", "SELECT * FROM asus.grid_img WHERE status = 
                     img "<?= conianer[i+1] ?>"
                     img "<?= conianer[i+2] ?>"
                 } -->
+                <?php for($i = 0; $i < $TableMoveImg.sizeof(); $i+=3){ ?>
                 <div class = "containerItemColumnOne">
                     <div class = "itemImg">
-                        <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
-                        <div class = "captionItemSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, placeat.</div>
+                        <img src="<?= $TableMoveImg[$i]->path ?>" alt="">
+                        <div class = "captionItemSlider"><?= $TableMoveImg[$i]->body ?></div>
                     </div>
                     <div class = "itemImg">
-                        <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
-                        <div class = "captionItemSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, placeat.</div>
+                        <img src="<?= $TableMoveImg[$i+1]->path ?>" alt="">
+                        <div class = "captionItemSlider"><?= $TableMoveImg[$i+1]->body ?></div>
                     </div>
                     <div class = "itemImg">
-                        <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
-                        <div class = "captionItemSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, placeat.</div>
-
+                        <img src="<?= $TableMoveImg[$i+2]->path ?>" alt="">
+                        <div class = "captionItemSlider"><?= $TableMoveImg[$i+2]->body ?></div>
                     </div>
                 </div>
+                <?php } ?>
                     <!-- for(let i = 0; i < container.sizeof; i += 2){
                     img "<?= conianer[i] ?>"
                     img "<?= conianer[i+1] ?>"
