@@ -333,114 +333,91 @@
     height: 300px;
 }
 /* ================================================== GRID BOX IMAGE  =========================================================== */
-/* GRID IMAGE DIVEST */
-.GirdImageDivest{
+/* BOX SLIDER */
+.boxSliderProduct{
     position: relative;
 }
-/* CONTAINER GRID IMAGE */
-.containerGirdImage{
+/* containerBoxSlider */
+.containerBoxSlider{
     width: 100%;
-    height: 550px;
-    /* margin: 5px; */
-    background-color: rgb(162, 10, 10);
+    height: 500px;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-flow: column wrap;
-    overflow-x:scroll ;
-    justify-content: start;
-    align-items: start;
+    overflow-x: scroll;
 }
-/* CONTAINER GRID IMAGE :: WEBKIT SCROLLBAR */
-.containerGirdImage::-webkit-scrollbar{
+.containerBoxSlider::-webkit-scrollbar{
     display: none;
 }
-/* ITEM GRIED FRIRST */
-.itemGridFirst{
-    width: 50%;
-    height: 100%;
+/* ITEM BOX SLIDER */
+.itemBoxSlider img {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;   
+    object-fit:inherit ; 
+}
+.itemBoxSlider:nth-child(1){
+    width: 49.5%;
+    height: 99.5%;
+    margin: .25%;   
+    overflow: hidden;
+    position: relative;
+    
+}
+.itemBoxSlider{
+    width: 24.5%;
+    margin: .25% ;
+    height: 48.40%;
     overflow: hidden;
     position: relative;
 }
-/* ITEM GRIED FIRST IMG */
-.itemGridFirst img{
-    width: 99%;
-    height: 99%;
-    margin: .5%;
-    overflow: hidden;
-}
-/* CPATION GRID IMG */
-.captionGridImg {
+/* CAPTION BOX SLIDER */
+.captionBoxSlider {
     position: absolute;
     background-color: rgba(255, 255, 255, .1);
-    color:white;
     bottom: 0;
-    width: 100%;
-    left:0;
-    padding: 13px;
-    display: flex;
-    flex-flow: column nowrap;
+    padding: 15px;
 }
-/* TITLE CAPTION GRID IMG */
-.titleCpationGridImg{
-    font-size: large;
-    margin: 1%;
+.captionBoxSlider .titleBoxSlider{
+    color: rgb(201, 201, 201);
+    margin-bottom: 5px;
 }
-/* BUTTON RIGHT GRID IMAGE BUTTTON LEFT GRIED IMAGE */
-#ButtonRigthGridImage , #ButtonLeftGridImage{
-    background-color: transparent;
-    position: absolute ;
+.captionBoxSlider .bodyBoxSlider {
+    font-size: small;
+    color: white;
+}
+/* LEFT & RIGHT BOX SLIDER  */
+#leftBoxSlider {
+    position: absolute;
+    opacity: .1;
     top:50%;
-    opacity: .2;
-    color:aqua;
+    left:5%;
+    color: aqua;
     transition: opacity .5s;
 }
-/* BUTTON RIGHT GRID IMAGE  : HVOER BUTTTON LEFT GRIED IMAGE : HOVER */
-#ButtonRigthGridImage:hover , #ButtonLeftGridImage:hover {
-    opacity: 1;
+#rightBoxSlider {   
+    position: absolute;
+    opacity: .1;
+    top:50%;
+    right: 5%;
+    color: aqua;    
+    transition: opacity .5s;
+}
+/* LEFT BOX SLIDER : HOVER & RIGHT BOX SLIDER HOVER */
+#leftBoxSlider:hover, #rightBoxSlider:hover{
     cursor: pointer;
+    opacity: 1;
 }
-/* BUTTON RIGHT GRIED IMAGE */
-#ButtonRigthGridImage{
-    right: 3%;
+/* CONTINER CLCIK BOX SLIDER */
+.boxContainerClickBoxSlider{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-flow: row nowrap;
 }
-/* BUTTON LEFT GRID IMAGE */
-#ButtonLeftGridImage{
-    left:3%
+.containerClickBoxSlider{
+    display: none
 }
-/* BODY CAPTION GRID IMAGE */
-.bodyCaptionGridImg{
-    font-size: medium;
-    margin: 1%;
-    color:gray
-}
-/* ITEM GRID FIRST CAPTION GRID IMAGE */
-.itemGridFirst .captionGridImg{
-    width: 98%;
-    left: .5%
-}
-/* ITEM GRID OTHER CAPTION GRID IMAGE */
-.itemGridOther .captionGridImg{
-    width: 100%;
-    left: 1%;
-}
-/* ITEM GRID OTHER */
-.itemGridOther{
-    width: 25%;
-    overflow: hidden;
-    height: 50%;
-    position: relative;
-}
-/* ITEM GRID OTHER IMG */
-.itemGridOther img {
-    width: 98%;
-    height: 98%;
-    margin: 1%;
-    overflow: hidden;
-}
-/* CONTAINER CLICK SLELECT */
-.containerClickSelect{
-    display: none;
-}
-
 /*========================================================================= @ MEDIA SCREEN AND MAX - WIDTH 1300 PX ==================================================================================*/
 @media screen and (max-width:1300px) {
     /* CONTAINER SLIDER IMAGE */
@@ -481,6 +458,17 @@
     /* ITEM BUTTON NTH-CHILD () */
     .itembutton:nth-child(1){
         background-color: blue;
+    }
+}
+/*========================================================================= @ MEDIA SCREEN AND MAX - WIDTH 1200 PX ==================================================================================*/
+/* MEDIA SCREEN AND (MAX-WIDTH 1200PX) */
+@media screen and (max-width : 1200px) {
+    /* ITEM BOX SLIDER */
+    .itemBoxSlider{
+        width: 49.5%;
+        height: 99.5%;
+        margin: .25%;   
+        overflow: hidden;
     }
 }
 
@@ -605,57 +593,37 @@
         width: 60%;
     }
     /* ================================================== GRID BOX IMAGE  =========================================================== */
-    /* ITEM GRID FIREST */
-    .itemGridFirst{
-        width: 100%;
+    /*  ITEM BOX SLIDER */
+    .itemBoxSlider:nth-child(1), .itemBoxSlider{
+        min-width: 100%;
         margin: 0;
         height: 100%;
+        overflow:auto;
     }
-    /* ITEM GRID FIRST IMG * ITEM GRID OTHER IMG */
-    .itemGridFirst img    {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        object-fit:fill ;
-        /* overflow: hidden; */
+    #leftBoxSlider, #rightBoxSlider {
+        display: none !important;
     }
-    .itemGridOther img{
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        object-fit:fill ;
-    }
-    /* ITEM GRID OTHER */
-    .itemGridOther{
-        width: 100% ;
-        height: 100%;
-        margin: 0;
-    }
-    /* ITEM GRID OTHER CAPTION GRID IMG */
-    .itemGridOther .captionGridImg, .itemGridFirst .captionGridImg{
-        width: 100%;
-        left: 0%;
-    }
-    #ButtonLeftGridImage , #ButtonRigthGridImage{
-        /* display: none !important; */
-    }
-    /* CONATINER CLICK SELECT */
-    .containerClickSelect{
+    .containerClickBoxSlider{
         display: flex;
         position: absolute;
-        bottom:  20%;
-        border-radius:10px ;
-        background-color: rgb(163, 163, 163);
+        bottom: 18%;
+        width: 90%;
+        height: 10px;
+        background-color: rgb(227, 227, 227);;
+        border-radius: 10px;
+        flex-flow: row nowrap;
     }
-    /* ITEM CLICK SELECT */
-    .itemClickSelect{
+    .itemClickBoxSlider{
         width: 30px;
         height: 10px;
         border-radius: 10px;
-        background-color:transparent
+        background-color: rgb(227, 227, 227);
     }
-    .itemClickSelect:nth-child(1){
-        background-color: blue;
+    .itemClickBoxSlider:hover{
+        cursor: pointer;
+    }
+    .itemClickBoxSlider:nth-child(1){
+        background-color: red;
     }
 }
 

@@ -90,61 +90,52 @@ const scrollBehaviorContainerSliderImage = () => {
    containerSliderImg.scrollLeft = 0  
 }
 /* ================================================== GRID BOX IMAGE  =========================================================== */
-const buttonleft = document.getElementById("ButtonLeftGridImage")
-const buttonRight = document.getElementById("ButtonRigthGridImage")
-const containerGirdImage  = document.querySelector(".containerGirdImage")
-const itemClickSelect = document.querySelectorAll(".itemClickSelect")
+const leftBoxSlider = document.getElementById("leftBoxSlider")
+const rightBoxSlider = document.getElementById('rightBoxSlider')
+const containerBox = document.querySelector(".containerBoxSlider")
+const itemClick = document.querySelectorAll(".itemClickBoxSlider")
 
-// CONTAINER GRID IMAGE : WHELL
-containerGirdImage.addEventListener("wheel",(e)=>{
-    if(window.innerWidth < 750){
-        // e.preventDefault()
-    }
-  
+containerBox.addEventListener("wheel", (e)=>{
+    e.preventDefault();
 })
-// FUNCTION VIEW BUTTON LEFT RIGTH
-const hideViewButtonLeftRigth = () => {
-    buttonleft.style.display =  containerGirdImage.scrollLeft  <= window.innerWidth - 500 ? "none" : "block"
-    buttonRight.style.display = containerGirdImage.scrollLeft  >= containerGirdImage.scrollWidth - window.innerWidth - 400 ? "none":"block"
+const changeBackgroundColorItemClick =  (optional = null) => {
+    itemClick.forEach((item)=>{
+        item.style.backgroundColor = "rgb(227, 227, 227)"
+    })
+    if(optional) itemClick[0].style.backgroundColor = "red";
 }
-hideViewButtonLeftRigth()
-// BUTTON RIGHT
-buttonRight.addEventListener("click",(e)=>{ 
-    containerGirdImage.style.scrollBehavior = "smooth"
-    containerGirdImage.scrollLeft += window.innerWidth 
-    setTimeout(()=>{
-        hideViewButtonLeftRigth()
-    }, 500)
-})
-
-const changeItemClickSelect = (optional = null) => {
-    itemClickSelect.forEach((item) =>{
-        item.style.backgroundColor = "rgb(163, 163, 163)"
-    } )
-    if(optional) {
-        itemClickSelect[0].style.backgroundColor = "blue"
-        containerGirdImage.style.scrollBehavior = "smooth"
-        containerGirdImage.scrollLeft = 0; 
-        hideViewButtonLeftRigth()
-    }
-}
-itemClickSelect.forEach((item,index) => {
+itemClick.forEach((item, index) => {
     item.addEventListener("click", (e)=>{
-    changeItemClickSelect()
-    item.style.backgroundColor = "blue"
-      containerGirdImage.style.scrollBehavior = "smooth"
-    containerGirdImage.scrollLeft = (index)* (window.innerWidth ) 
-    console.log(window.innerWidth)
-   }) 
-});
-// BUTTON LEFT
-buttonleft.addEventListener("click",(e)=>{
-    containerGirdImage.style.scrollBehavior = "smooth"
-    containerGirdImage.scrollLeft -= window.innerWidth 
-    setTimeout(()=>{
-        hideViewButtonLeftRigth()
-    }, 500) 
+        containerBox.style.scrollBehavior = "smooth"
+        containerBox.scrollLeft = index * window.innerWidth 
+        changeBackgroundColorItemClick()
+        itemClick[index].style.backgroundColor = "red"
+    })
 })
+const viewHideClickLeftRight = () => {
+    setTimeout(()=> {
+        leftBoxSlider.style.display  = containerBox.scrollLeft < window.innerWidth / 2 ? "none" : "block"
+        rightBoxSlider.style.display = containerBox.scrollLeft >= Math.round(containerBox.scrollWidth) - window.innerWidth  ? "none" : "block"
+    },1000)
+    
+}
+viewHideClickLeftRight()
+leftBoxSlider.addEventListener("click", (e)=>{
+    containerBox.style.scrollBehavior = "smooth"
+    containerBox.scrollLeft -= window.innerWidth 
+    viewHideClickLeftRight()
+
+})
+rightBoxSlider.addEventListener("click", (e)=>{
+    containerBox.style.scrollBehavior = "smooth"
+    containerBox.scrollLeft += window.innerWidth 
+    viewHideClickLeftRight()
+
+})
+const resizeContainerBox = () => {
+    containerBox.style.scrollBehavior = "smooth"
+    containerBox.scrollLeft = 0 
+}
 
 
 // WINDOW RESIZE EVENT LISTENER
@@ -155,5 +146,7 @@ window.addEventListener('resize', (e)=>{
     changeBackGroundColorButton (itembutton, option = "first", color = "blue")
     changeBackGroundColorButton (itembuttonclick, option = 'first', color = " rgba(252, 5, 5, 0.655)" )    
     /* ================================================== GRID BOX IMAGE  =========================================================== */
-    changeItemClickSelect("first")
+    resizeContainerBox()
+    viewHideClickLeftRight()
+    changeBackgroundColorItemClick("optional")
 })

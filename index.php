@@ -128,63 +128,25 @@ $TableColumnImg =  readTable ("asus", "SELECT * FROM asus.column_img WHERE statu
             </div>
         </div>
         <!--  ================================================== GRID BOX IMAGE  ===========================================================  -->
-        <div class = "GirdImageDivest">
-            <div class="containerGirdImage" >
-            
-                <div class = 'itemGridFirst'>
-                    <img src="<?= $TableColumnImg[0]->path ?>" alt="">
-                    <div class="captionGridImg">
-                        <div class = "titleCpationGridImg">0-<?= $TableColumnImg[0]->name ?></div>
-                        <div class = "bodyCaptionGridImg"><?=  $TableColumnImg[0]->body ?></div>
+        <div class = "boxSliderProduct">
+            <div class = "containerBoxSlider">
+                <!-- foreach -->
+                <div class = "itemBoxSlider">
+                    <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
+                    <div class = "captionBoxSlider">
+                        <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
+                        <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
                     </div>
                 </div>
-                <?php for($i = 1; $i < sizeof($TableColumnImg); $i++) { ?>
-                    <div class = "itemGridOther">
-                        <img src="<?= $TableColumnImg[$i]->path ?>" alt="">
-                        <div class="captionGridImg">
-                            <div class = "titleCpationGridImg"><?= $i ?>-<?= $TableColumnImg[$i]->name ?></div>
-                            <div class = "bodyCaptionGridImg"><?= $TableColumnImg[$i]->body ?></div>
-                        </div>           
-                    </div>
-                <?php } ?>
-                <?php for($i = 1; $i < sizeof($TableColumnImg); $i++) { ?>
-                    <div class = "itemGridOther">
-                        <img src="<?= $TableColumnImg[$i]->path ?>" alt="">
-                        <div class="captionGridImg">
-                            <div class = "titleCpationGridImg"><?= $i ?>-<?= $TableColumnImg[$i]->name ?></div>
-                            <div class = "bodyCaptionGridImg"><?= $TableColumnImg[$i]->body ?></div>
-                        </div>           
-                    </div>
-                <?php } ?>
-                <?php for($i = 1; $i < sizeof($TableColumnImg); $i++) { ?>
-                    <div class = "itemGridOther">
-                        <img src="<?= $TableColumnImg[$i]->path ?>" alt="">
-                        <div class="captionGridImg">
-                            <div class = "titleCpationGridImg"><?= $i ?>-<?= $TableColumnImg[$i]->name ?></div>
-                            <div class = "bodyCaptionGridImg"><?= $TableColumnImg[$i]->body ?></div>
-                        </div>           
-                    </div>
-                <?php } ?>
-                <?php for($i = 1; $i < sizeof($TableColumnImg); $i++) { ?>
-                    <div class = "itemGridOther">
-                        <img src="<?= $TableColumnImg[$i]->path ?>" alt="">
-                        <div class="captionGridImg">
-                            <div class = "titleCpationGridImg"><?= $i ?>-<?= $TableColumnImg[$i]->name ?></div>
-                            <div class = "bodyCaptionGridImg"><?= $TableColumnImg[$i]->body ?></div>
-                        </div>           
-                    </div>
-                <?php } ?>
             </div>
-            <div id = "ButtonLeftGridImage">iconLeft</div>
-            <div id = "ButtonRigthGridImage">iconRight</div>
-            <div style = "display:flex; justify-content: center; align-items: center;">
-                <div class = "containerClickSelect">
-                <?php foreach($TableColumnImg as $item){ ?>
-                    <div class = "itemClickSelect"></div>
-                <?php } ?>
+            <div id = "leftBoxSlider">clickleft</div>
+            <div id = "rightBoxSlider">clickright</div>
+            <div class = "boxContainerClickBoxSlider">
+                <div class = "containerClickBoxSlider">
+                    <!-- foreach -->
+                    <div class="itemClickBoxSlider"></div>
                 </div>
             </div>
-          
         </div>
     </main>
     <!-- header -->
