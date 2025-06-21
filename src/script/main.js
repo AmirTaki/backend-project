@@ -97,7 +97,10 @@ const itemClickSelect = document.querySelectorAll(".itemClickSelect")
 
 // CONTAINER GRID IMAGE : WHELL
 containerGirdImage.addEventListener("wheel",(e)=>{
-    e.preventDefault()
+    if(window.innerWidth < 750){
+        // e.preventDefault()
+    }
+  
 })
 // FUNCTION VIEW BUTTON LEFT RIGTH
 const hideViewButtonLeftRigth = () => {
@@ -130,7 +133,8 @@ itemClickSelect.forEach((item,index) => {
     changeItemClickSelect()
     item.style.backgroundColor = "blue"
       containerGirdImage.style.scrollBehavior = "smooth"
-    containerGirdImage.scrollLeft = index * window.innerWidth
+    containerGirdImage.scrollLeft = (index)* (window.innerWidth ) - 15
+    console.log(window.innerWidth)
    }) 
 });
 // BUTTON LEFT

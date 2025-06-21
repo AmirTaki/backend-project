@@ -9,6 +9,7 @@ $TableImg =  readTable ("asus", "SELECT * FROM  asus.img_menu WHERE status = 10"
 $TableScrollerImage =  readTable ("adidas", "SELECT * FROM adidas.scrollerimg_main WHERE status = 10", $single = false, $execute = null);
 $TableGridImg =  readTable ("asus", "SELECT * FROM asus.grid_img WHERE status = 10", $single = false, $execute = null);
 $TableMoveImg =  readTable ("asus", "SELECT * FROM asus.move_img WHERE status = 10", $single = false, $execute = null);
+$TableColumnImg =  readTable ("asus", "SELECT * FROM asus.column_img WHERE status = 10", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +27,6 @@ $TableMoveImg =  readTable ("asus", "SELECT * FROM asus.move_img WHERE status = 
 </head>
 <body>
     <header>
-        <?php require_once "./layouts/navbar.php" ?>
     </header>
     <main>
        <!--    =========================================================  CONTAINER GRID IMAGE : IMG   ===================================================== -->
@@ -129,38 +129,52 @@ $TableMoveImg =  readTable ("asus", "SELECT * FROM asus.move_img WHERE status = 
         <!--  ================================================== GRID BOX IMAGE  ===========================================================  -->
         <div class = "GirdImageDivest">
             <div class="containerGirdImage" >
+            
                 <div class = 'itemGridFirst'>
-                    <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
+                    <img src="<?= $TableColumnImg[0]->path ?>" alt="">
                     <div class="captionGridImg">
-                        <div class = "titleCpationGridImg">-Lorem ipsum dolor sit amet.</div>
-                        <div class = "bodyCaptionGridImg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto reprehenderit nulla et molestiae unde ducimus!</div>
+                        <div class = "titleCpationGridImg">0-<?= $TableColumnImg[0]->name ?></div>
+                        <div class = "bodyCaptionGridImg"><?=  $TableColumnImg[0]->body ?></div>
                     </div>
                 </div>
-                <div class = "itemGridOther">
-                    <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
-                    <div class="captionGridImg">
-                        <div class = "titleCpationGridImg">-Lorem ipsum dolor sit amet.</div>
-                        <div class = "bodyCaptionGridImg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto reprehenderit nulla et molestiae unde ducimus!</div>
-                    </div>           
-                </div>
+                <?php for($i = 1; $i < sizeof($TableColumnImg); $i++) { ?>
+                    <div class = "itemGridOther">
+                        <img src="<?= $TableColumnImg[$i]->path ?>" alt="">
+                        <div class="captionGridImg">
+                            <div class = "titleCpationGridImg"><?= $i ?>-<?= $TableColumnImg[$i]->name ?></div>
+                            <div class = "bodyCaptionGridImg"><?= $TableColumnImg[$i]->body ?></div>
+                        </div>           
+                    </div>
+                <?php } ?>
+                <?php for($i = 1; $i < sizeof($TableColumnImg); $i++) { ?>
+                    <div class = "itemGridOther">
+                        <img src="<?= $TableColumnImg[$i]->path ?>" alt="">
+                        <div class="captionGridImg">
+                            <div class = "titleCpationGridImg"><?= $i ?>-<?= $TableColumnImg[$i]->name ?></div>
+                            <div class = "bodyCaptionGridImg"><?= $TableColumnImg[$i]->body ?></div>
+                        </div>           
+                    </div>
+                <?php } ?>
+                <?php for($i = 1; $i < sizeof($TableColumnImg); $i++) { ?>
+                    <div class = "itemGridOther">
+                        <img src="<?= $TableColumnImg[$i]->path ?>" alt="">
+                        <div class="captionGridImg">
+                            <div class = "titleCpationGridImg"><?= $i ?>-<?= $TableColumnImg[$i]->name ?></div>
+                            <div class = "bodyCaptionGridImg"><?= $TableColumnImg[$i]->body ?></div>
+                        </div>           
+                    </div>
+                <?php } ?>
             </div>
             <div id = "ButtonLeftGridImage">iconLeft</div>
             <div id = "ButtonRigthGridImage">iconRight</div>
-            <div class = "containerClickSelect">
-                <div class = "itemClickSelect"></div>
-                <div class = "itemClickSelect"></div>
-                <div class = "itemClickSelect"></div>
-                <div class = "itemClickSelect"></div>
-                <div class = "itemClickSelect"></div>
-                <div class = "itemClickSelect"></div>
-                <div class = "itemClickSelect"></div>
-                <div class = "itemClickSelect"></div>
-                <div class = "itemClickSelect"></div>
-                <div class = "itemClickSelect"></div>
-                <div class = "itemClickSelect"></div>
-                <div class = "itemClickSelect"></div>
-                <div class = "itemClickSelect"></div>
+            <div style = "display:flex; justify-content: center; align-items: center;">
+                <div class = "containerClickSelect">
+                <?php foreach($TableColumnImg as $item){ ?>
+                    <div class = "itemClickSelect"></div>
+                <?php } ?>
+                </div>
             </div>
+          
         </div>
     </main>
     <!-- header -->

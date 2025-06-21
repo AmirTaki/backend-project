@@ -341,7 +341,7 @@
 .containerGirdImage{
     width: 100%;
     height: 550px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(162, 10, 10);
     display: flex;
     flex-flow: column wrap;
     overflow-x:scroll ;
@@ -413,12 +413,12 @@
 }
 /* ITEM GRID FIRST CAPTION GRID IMAGE */
 .itemGridFirst .captionGridImg{
-    width: 99%;
+    width: 98%;
     left: .5%
 }
 /* ITEM GRID OTHER CAPTION GRID IMAGE */
 .itemGridOther .captionGridImg{
-    width: 98%;
+    width: 100%;
     left: 1%;
 }
 /* ITEM GRID OTHER */
@@ -605,18 +605,28 @@
     /* ITEM GRID FIREST */
     .itemGridFirst{
         width: 100%;
+        margin: 0;
         height: 100%;
     }
     /* ITEM GRID FIRST IMG * ITEM GRID OTHER IMG */
-    .itemGridFirst img,     .itemGridOther img {
+    .itemGridFirst img    {
         width: 100%;
         height: 100%;
         margin: 0;
+        object-fit:fill ;
+        /* overflow: hidden; */
+    }
+    .itemGridOther img{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        object-fit:fill ;
     }
     /* ITEM GRID OTHER */
     .itemGridOther{
-        width: 100%;
+        width: 100% ;
         height: 100%;
+        margin: 0;
     }
     /* ITEM GRID OTHER CAPTION GRID IMG */
     .itemGridOther .captionGridImg, .itemGridFirst .captionGridImg{
@@ -624,21 +634,19 @@
         left: 0%;
     }
     #ButtonLeftGridImage , #ButtonRigthGridImage{
-        display: none !important;
+        /* display: none !important; */
     }
     /* CONATINER CLICK SELECT */
     .containerClickSelect{
         display: flex;
         position: absolute;
         bottom:  20%;
-        left:15%;
         border-radius:10px ;
         background-color: rgb(163, 163, 163);
-        width: 70%
     }
     /* ITEM CLICK SELECT */
     .itemClickSelect{
-        width: 40px;
+        width: 30px;
         height: 10px;
         border-radius: 10px;
         background-color:transparent
