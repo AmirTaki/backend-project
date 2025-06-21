@@ -164,6 +164,15 @@ $TableColumnImg =  readTable ("asus", "SELECT * FROM asus.column_img WHERE statu
                         </div>           
                     </div>
                 <?php } ?>
+                <?php for($i = 1; $i < sizeof($TableColumnImg); $i++) { ?>
+                    <div class = "itemGridOther">
+                        <img src="<?= $TableColumnImg[$i]->path ?>" alt="">
+                        <div class="captionGridImg">
+                            <div class = "titleCpationGridImg"><?= $i ?>-<?= $TableColumnImg[$i]->name ?></div>
+                            <div class = "bodyCaptionGridImg"><?= $TableColumnImg[$i]->body ?></div>
+                        </div>           
+                    </div>
+                <?php } ?>
             </div>
             <div id = "ButtonLeftGridImage">iconLeft</div>
             <div id = "ButtonRigthGridImage">iconRight</div>
