@@ -133,7 +133,7 @@ itemClickSelect.forEach((item,index) => {
     changeItemClickSelect()
     item.style.backgroundColor = "blue"
       containerGirdImage.style.scrollBehavior = "smooth"
-    containerGirdImage.scrollLeft = (index)* (window.innerWidth ) - 15
+    containerGirdImage.scrollLeft = (index)* (window.innerWidth ) 
     console.log(window.innerWidth)
    }) 
 });

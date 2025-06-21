@@ -27,6 +27,7 @@ $TableColumnImg =  readTable ("asus", "SELECT * FROM asus.column_img WHERE statu
 </head>
 <body>
     <header>
+        <?php require_once "./layouts/navbar.php" ?>
     </header>
     <main>
        <!--    =========================================================  CONTAINER GRID IMAGE : IMG   ===================================================== -->
