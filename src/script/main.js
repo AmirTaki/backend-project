@@ -21,8 +21,6 @@ iconRigthtScrollImg.addEventListener("click",(e)=>{
     containerScroll.style.scrollBehavior = "smooth";
     containerScroll.scrollLeft += 600
 })
-
-
 /* ==================================================   BOX SLIDER IMAGE  =========================================================== */
 const clickLeftSlider =  document.getElementById("clickLeftSlider")
 const clickRightSlider = document.getElementById("clickRightSlider")
@@ -91,6 +89,59 @@ const scrollBehaviorContainerSliderImage = () => {
    containerSliderImg.style.scrollBehavior = "smooth"
    containerSliderImg.scrollLeft = 0  
 }
+/* ================================================== GRID BOX IMAGE  =========================================================== */
+const buttonleft = document.getElementById("ButtonLeftGridImage")
+const buttonRight = document.getElementById("ButtonRigthGridImage")
+const containerGirdImage  = document.querySelector(".containerGirdImage")
+const itemClickSelect = document.querySelectorAll(".itemClickSelect")
+
+// CONTAINER GRID IMAGE : WHELL
+containerGirdImage.addEventListener("wheel",(e)=>{
+    e.preventDefault()
+})
+// FUNCTION VIEW BUTTON LEFT RIGTH
+const hideViewButtonLeftRigth = () => {
+    buttonleft.style.display =  containerGirdImage.scrollLeft  <= window.innerWidth - 500 ? "none" : "block"
+    buttonRight.style.display = containerGirdImage.scrollLeft  >= containerGirdImage.scrollWidth - window.innerWidth - 400 ? "none":"block"
+}
+hideViewButtonLeftRigth()
+// BUTTON RIGHT
+buttonRight.addEventListener("click",(e)=>{ 
+    containerGirdImage.style.scrollBehavior = "smooth"
+    containerGirdImage.scrollLeft += window.innerWidth 
+    setTimeout(()=>{
+        hideViewButtonLeftRigth()
+    }, 500)
+})
+
+const changeItemClickSelect = (optional = null) => {
+    itemClickSelect.forEach((item) =>{
+        item.style.backgroundColor = "rgb(163, 163, 163)"
+    } )
+    if(optional) {
+        itemClickSelect[0].style.backgroundColor = "blue"
+        containerGirdImage.style.scrollBehavior = "smooth"
+        containerGirdImage.scrollLeft = 0; 
+        hideViewButtonLeftRigth()
+    }
+}
+itemClickSelect.forEach((item,index) => {
+    item.addEventListener("click", (e)=>{
+    changeItemClickSelect()
+    item.style.backgroundColor = "blue"
+      containerGirdImage.style.scrollBehavior = "smooth"
+    containerGirdImage.scrollLeft = index * window.innerWidth
+   }) 
+});
+// BUTTON LEFT
+buttonleft.addEventListener("click",(e)=>{
+    containerGirdImage.style.scrollBehavior = "smooth"
+    containerGirdImage.scrollLeft -= window.innerWidth 
+    setTimeout(()=>{
+        hideViewButtonLeftRigth()
+    }, 500) 
+})
+
 
 // WINDOW RESIZE EVENT LISTENER
 window.addEventListener('resize', (e)=>{
@@ -98,8 +149,7 @@ window.addEventListener('resize', (e)=>{
     hideShowClickLeftRigth() 
     scrollBehaviorContainerSliderImage()
     changeBackGroundColorButton (itembutton, option = "first", color = "blue")
-    changeBackGroundColorButton (itembuttonclick, option = 'first', color = " rgba(252, 5, 5, 0.655)" )
-  
-
-    
+    changeBackGroundColorButton (itembuttonclick, option = 'first', color = " rgba(252, 5, 5, 0.655)" )    
+    /* ================================================== GRID BOX IMAGE  =========================================================== */
+    changeItemClickSelect("first")
 })

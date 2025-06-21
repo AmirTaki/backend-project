@@ -332,7 +332,113 @@
     width: 350px;
     height: 300px;
 }
-
+/* ================================================== GRID BOX IMAGE  =========================================================== */
+/* GRID IMAGE DIVEST */
+.GirdImageDivest{
+    position: relative;
+}
+/* CONTAINER GRID IMAGE */
+.containerGirdImage{
+    width: 100%;
+    height: 550px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-flow: column wrap;
+    overflow-x:scroll ;
+    justify-content: start;
+    align-items: start;
+}
+/* CONTAINER GRID IMAGE :: WEBKIT SCROLLBAR */
+.containerGirdImage::-webkit-scrollbar{
+    display: none;
+}
+/* ITEM GRIED FRIRST */
+.itemGridFirst{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+/* ITEM GRIED FIRST IMG */
+.itemGridFirst img{
+    width: 99%;
+    height: 99%;
+    margin: .5%;
+    overflow: hidden;
+}
+/* CPATION GRID IMG */
+.captionGridImg {
+    position: absolute;
+    background-color: rgba(255, 255, 255, .1);
+    color:white;
+    bottom: 0;
+    width: 100%;
+    left:0;
+    padding: 13px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+/* TITLE CAPTION GRID IMG */
+.titleCpationGridImg{
+    font-size: large;
+    margin: 1%;
+}
+/* BUTTON RIGHT GRID IMAGE BUTTTON LEFT GRIED IMAGE */
+#ButtonRigthGridImage , #ButtonLeftGridImage{
+    background-color: transparent;
+    position: absolute ;
+    top:50%;
+    opacity: .2;
+    color:aqua;
+    transition: opacity .5s;
+}
+/* BUTTON RIGHT GRID IMAGE  : HVOER BUTTTON LEFT GRIED IMAGE : HOVER */
+#ButtonRigthGridImage:hover , #ButtonLeftGridImage:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+/* BUTTON RIGHT GRIED IMAGE */
+#ButtonRigthGridImage{
+    right: 3%;
+}
+/* BUTTON LEFT GRID IMAGE */
+#ButtonLeftGridImage{
+    left:3%
+}
+/* BODY CAPTION GRID IMAGE */
+.bodyCaptionGridImg{
+    font-size: medium;
+    margin: 1%;
+    color:gray
+}
+/* ITEM GRID FIRST CAPTION GRID IMAGE */
+.itemGridFirst .captionGridImg{
+    width: 99%;
+    left: .5%
+}
+/* ITEM GRID OTHER CAPTION GRID IMAGE */
+.itemGridOther .captionGridImg{
+    width: 98%;
+    left: 1%;
+}
+/* ITEM GRID OTHER */
+.itemGridOther{
+    width: 25%;
+    overflow: hidden;
+    height: 50%;
+    position: relative;
+}
+/* ITEM GRID OTHER IMG */
+.itemGridOther img {
+    width: 98%;
+    height: 98%;
+    margin: 1%;
+    overflow: hidden;
+}
+/* CONTAINER CLICK SLELECT */
+.containerClickSelect{
+    display: none;
+}
 
 /*========================================================================= @ MEDIA SCREEN AND MAX - WIDTH 1300 PX ==================================================================================*/
 @media screen and (max-width:1300px) {
@@ -494,6 +600,51 @@
     /* CLASIFIER CAPTION BUTTON */
     .clasifierCaptionButton{
         width: 60%;
+    }
+    /* ================================================== GRID BOX IMAGE  =========================================================== */
+    /* ITEM GRID FIREST */
+    .itemGridFirst{
+        width: 100%;
+        height: 100%;
+    }
+    /* ITEM GRID FIRST IMG * ITEM GRID OTHER IMG */
+    .itemGridFirst img,     .itemGridOther img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+    /* ITEM GRID OTHER */
+    .itemGridOther{
+        width: 100%;
+        height: 100%;
+    }
+    /* ITEM GRID OTHER CAPTION GRID IMG */
+    .itemGridOther .captionGridImg, .itemGridFirst .captionGridImg{
+        width: 100%;
+        left: 0%;
+    }
+    #ButtonLeftGridImage , #ButtonRigthGridImage{
+        display: none !important;
+    }
+    /* CONATINER CLICK SELECT */
+    .containerClickSelect{
+        display: flex;
+        position: absolute;
+        bottom:  20%;
+        left:15%;
+        border-radius:10px ;
+        background-color: rgb(163, 163, 163);
+        width: 70%
+    }
+    /* ITEM CLICK SELECT */
+    .itemClickSelect{
+        width: 40px;
+        height: 10px;
+        border-radius: 10px;
+        background-color:transparent
+    }
+    .itemClickSelect:nth-child(1){
+        background-color: blue;
     }
 }
 

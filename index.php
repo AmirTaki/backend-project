@@ -126,6 +126,42 @@ $TableMoveImg =  readTable ("asus", "SELECT * FROM asus.move_img WHERE status = 
                 <?php } ?>
             </div>
         </div>
+        <!--  ================================================== GRID BOX IMAGE  ===========================================================  -->
+        <div class = "GirdImageDivest">
+            <div class="containerGirdImage" >
+                <div class = 'itemGridFirst'>
+                    <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
+                    <div class="captionGridImg">
+                        <div class = "titleCpationGridImg">-Lorem ipsum dolor sit amet.</div>
+                        <div class = "bodyCaptionGridImg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto reprehenderit nulla et molestiae unde ducimus!</div>
+                    </div>
+                </div>
+                <div class = "itemGridOther">
+                    <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
+                    <div class="captionGridImg">
+                        <div class = "titleCpationGridImg">-Lorem ipsum dolor sit amet.</div>
+                        <div class = "bodyCaptionGridImg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto reprehenderit nulla et molestiae unde ducimus!</div>
+                    </div>           
+                </div>
+            </div>
+            <div id = "ButtonLeftGridImage">iconLeft</div>
+            <div id = "ButtonRigthGridImage">iconRight</div>
+            <div class = "containerClickSelect">
+                <div class = "itemClickSelect"></div>
+                <div class = "itemClickSelect"></div>
+                <div class = "itemClickSelect"></div>
+                <div class = "itemClickSelect"></div>
+                <div class = "itemClickSelect"></div>
+                <div class = "itemClickSelect"></div>
+                <div class = "itemClickSelect"></div>
+                <div class = "itemClickSelect"></div>
+                <div class = "itemClickSelect"></div>
+                <div class = "itemClickSelect"></div>
+                <div class = "itemClickSelect"></div>
+                <div class = "itemClickSelect"></div>
+                <div class = "itemClickSelect"></div>
+            </div>
+        </div>
     </main>
     <!-- header -->
     <script src = "./src/script/header.js"></script>
