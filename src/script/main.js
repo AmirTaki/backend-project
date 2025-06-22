@@ -138,6 +138,8 @@ const resizeContainerBox = () => {
 }
 
 
+
+
 // WINDOW RESIZE EVENT LISTENER
 window.addEventListener('resize', (e)=>{
    /* ==================================================  CONTAINER SLIDER IMAGE  =========================================================== */

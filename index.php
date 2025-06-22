@@ -131,20 +131,24 @@ $TableColumnImg =  readTable ("asus", "SELECT * FROM asus.column_img WHERE statu
         <div class = "boxSliderProduct">
             <div class = "containerBoxSlider">
                 <!-- foreach -->
+                <?php foreach($TableGridImg as $item){ ?>
                 <div class = "itemBoxSlider">
-                    <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
+                    <img src="<?= $item->path ?>" alt="">
                     <div class = "captionBoxSlider">
-                        <div class = "titleBoxSlider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni.</div>
-                        <div class = "bodyBoxSlider">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, accusamus in quasi eum possimus nam culpa. Optio pariatur praesentium iusto.</div>
+                        <div class = "titleBoxSlider"><?= $item->name ?></div>
+                        <div class = "bodyBoxSlider">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, autem quidem eius voluptatum, libero fugiat molestias eum voluptate voluptates laborum nemo neque placeat soluta repellat labore! Minus odit vitae magnam.</div>
                     </div>
                 </div>
+                <?php } ?>
             </div>
             <div id = "leftBoxSlider">clickleft</div>
             <div id = "rightBoxSlider">clickright</div>
             <div class = "boxContainerClickBoxSlider">
                 <div class = "containerClickBoxSlider">
                     <!-- foreach -->
-                    <div class="itemClickBoxSlider"></div>
+                    <?php foreach($TableGridImg as $img){ ?>
+                        <div class="itemClickBoxSlider"></div>
+                    <?php } ?>
                 </div>
             </div>
         </div>

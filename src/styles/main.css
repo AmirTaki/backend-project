@@ -346,6 +346,8 @@
     flex-flow: column wrap;
     overflow-x: scroll;
 }
+   
+
 .containerBoxSlider::-webkit-scrollbar{
     display: none;
 }
@@ -354,20 +356,19 @@
     width: 100%;
     overflow: hidden;
     height: 100%;   
-    object-fit:inherit ; 
+    /* object-fit:inherit ;  */
 }
 .itemBoxSlider:nth-child(1){
     width: 49.5%;
-    height: 99.5%;
+    height: 99%;
     margin: .25%;   
     overflow: hidden;
     position: relative;
-    
 }
 .itemBoxSlider{
     width: 24.5%;
     margin: .25% ;
-    height: 48.40%;
+    height: 48%;
     overflow: hidden;
     position: relative;
 }
@@ -598,7 +599,7 @@
         min-width: 100%;
         margin: 0;
         height: 100%;
-        overflow:auto;
+        /* overflow:auto; */
     }
     #leftBoxSlider, #rightBoxSlider {
         display: none !important;
@@ -607,14 +608,14 @@
         display: flex;
         position: absolute;
         bottom: 18%;
-        width: 90%;
+        /* width: 90%; */
         height: 10px;
         background-color: rgb(227, 227, 227);;
         border-radius: 10px;
         flex-flow: row nowrap;
     }
     .itemClickBoxSlider{
-        width: 30px;
+        width: 24px;
         height: 10px;
         border-radius: 10px;
         background-color: rgb(227, 227, 227);
