@@ -101,12 +101,12 @@ $TableColumnImg =  readTable ("asus", "SELECT * FROM asus.column_img WHERE statu
         <div class = "boxSliderProduct">
             <div class = "containerBoxSlider">
                 <!-- foreach -->
-                <?php foreach($TableGridImg as $item){ ?>
+                <?php foreach($TableColumnImg as $item){ ?>
                 <div class = "itemBoxSlider">
                     <img src="<?= $item->path ?>" alt="">
                     <div class = "captionBoxSlider">
                         <div class = "titleBoxSlider"><?= $item->name ?></div>
-                        <div class = "bodyBoxSlider">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, autem quidem eius voluptatum, libero fugiat molestias eum voluptate voluptates laborum nemo neque placeat soluta repellat labore! Minus odit vitae magnam.</div>
+                        <div class = "bodyBoxSlider"><?= $item->body  ?></div>
                     </div>
                 </div>
                 <?php } ?>
@@ -116,7 +116,7 @@ $TableColumnImg =  readTable ("asus", "SELECT * FROM asus.column_img WHERE statu
             <div class = "boxContainerClickBoxSlider">
                 <div class = "containerClickBoxSlider">
                     <!-- foreach -->
-                    <?php foreach($TableGridImg as $img){ ?>
+                    <?php foreach($TableColumnImg as $img){ ?>
                         <div class="itemClickBoxSlider"></div>
                     <?php } ?>
                 </div>
