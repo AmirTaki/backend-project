@@ -12,6 +12,7 @@ $TableMoveImg =  readTable ("asus", "SELECT * FROM asus.move_img WHERE status = 
 $TableColumnImg =  readTable ("asus", "SELECT * FROM asus.column_img WHERE status = 10", $single = false, $execute = null);
 $backgroundTable = readTable('nike', "SELECT * FROM nike.background WHERE status = 10", $single = false, $execute = null) ;
 $titleColumnTable = readTable('nike', "SELECT * FROM nike.title_column WHERE status = 10", $single = false, $execute = null) ;
+$itemColumnTable = readTable('nike', "SELECT * FROM nike.item_column WHERE status = 10", $single = false, $execute = null) ;
 
 ?>
 <!DOCTYPE html>
@@ -142,9 +143,13 @@ $titleColumnTable = readTable('nike', "SELECT * FROM nike.title_column WHERE sta
                     <div class = "itemContainer">
                         <div class = "itemContainerColumn"><?= $title->title ?></div>
                         <!-- foreach -->
-                        <div class = "itemToItemContainer">
-                            <div class= "itemToMenu">item</div>
-                        </div>
+                        <?php foreach($itemColumnTable as $category) {
+                            if($title->title === $category->title) {
+                        ?>
+                            <div class = "itemToItemContainer">
+                                <div class= "itemToMenu"><?= $category->category ?></div>
+                            </div>
+                        <?php }} ?>
                     </div>
                 <?php } ?>
             </div>

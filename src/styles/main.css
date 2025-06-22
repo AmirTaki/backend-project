@@ -426,14 +426,15 @@
 }
 /*  ================================================== MENU MAIN COLUMN  ===========================================================   */
 .containerMenuMain{
-    height: 300px;
+    padding: 50px 0;
+    height: 700px;
     text-align: left;
     background-color: transparent;
 }
 .menuConatainer{
     width: 90%;
     background-color: transparent;
-    height: 40% ;
+    height: 25% ;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -447,19 +448,20 @@
 }
 .itemContainer{
     background-color: transparent;
-    margin: 0 5%;
-    font-size: large;
+    margin: 0 3%;
+    font-size: 17px;
     color: rgb(78, 78, 78);
 }
 .itemToItemContainer{
-    padding-top: 20px;
+    /* padding-top: 20px; */
     background-color: transparent;
 }
 .itemToMenu{
     color: gray;
     margin-top: 5px;
     padding:  10px 5px;
-    font-size: medium;
+    padding-left: 0;
+    font-size: 15px;
     transition: color .5s,text-decoration .5s ;
 }
 .itemToMenu:hover {
@@ -632,11 +634,12 @@
     .containerMenuMain{
         text-align: left;
         /* display: flex; */
-        height: auto;
+        height: 0px;
     }
     .menuConatainer{
+        background-color: transparent;
         flex-flow: column nowrap;
-        align-items: left   ;
+        /* align-items: left   ; */
         justify-content: center;
         height: auto ;
         width: 100%;
@@ -647,26 +650,35 @@
         height: auto;
     }
     .itemContainer{
+        z-index: 3 ;
         background-color: transparent;
         margin : 0;
-        margin-bottom: 10px;
+        margin-bottom: 10px ;
         padding: .47% 2%;
         background-color: transparent;
-        overflow: hidden;    
-        display: flex;
+        overflow: hidden ;    
+        display: flex; 
         flex-flow: column nowrap;
     }
     .itemToItemContainer{
+        padding-top: 0;
         background-color: transparent;
     }
+
     .itemToMenu{
-        height: 0;
-        margin-top: 0;
+        background-color: transparent ;
+        height: 0; 
+        margin-top: 0 ;
         padding:  0;
         padding-left: 10px;
         transition: height .5s;
         width: 100%;
         background-color: transparent;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        overflow: hidden;
+        justify-content: space-between;
     } 
 }
 

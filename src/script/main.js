@@ -182,7 +182,7 @@ const HieghItemToMenuResize = () => {
 
 const checkHeightItemContainer = (items) => {
     for(let i = 0; i < items.length; i ++){
-        if(items[i].style.height === "30px"){
+        if(items[i].style.height === "40px"){
             return true
         }
     }   
@@ -194,10 +194,12 @@ itemContainerColumn.forEach((item, index) => {
             let columns =  itemContainer[index].querySelectorAll(".itemToMenu")
             if(checkHeightItemContainer(columns)){
                 columnHight(columns, 0)
+                //  console.log("ok")
             }
             else{
+                console.log("ok")
                 columnHight(itemToMenu, 0)
-                columnHight(columns, 30)
+                columnHight(columns, "40px")
             }
         }    
     })
