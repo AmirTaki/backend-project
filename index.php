@@ -73,21 +73,27 @@ $TableColumnImg =  readTable ("asus", "SELECT * FROM asus.column_img WHERE statu
         <div class = "boxSliderImage">
             <div class = "containerSliderImg">
                 <!-- foreach -->
-                <div class = "itemImg">
-                    <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
-                    <div class = "itemCaption">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, rem?</div>
-                </div>
+                <?php foreach($TableMoveImg as $item){ ?>
+                    <div class = "itemImg">
+                        <img src="<?= $item->path ?>" alt="">
+                        <div class = "itemCaption"><?= $item->body ?></div>
+                    </div>
+                <?php } ?>
             </div>
             <div id = "clickLeftSlider">left</div>
             <div id = "clickRightSlider">right</div>
             <div class = "containerButtonSlider">
                 <div class = "containerButtonClickColumnOne">
                 <!-- foreach -->
-                    <div class ="itemButtonClickColumnOne"></div>
+                    <?php for ($i = 0; $i < sizeof($TableMoveImg); $i+= 2) { ?>
+                        <div class ="itemButtonClickColumnOne"></div>
+                    <?php } ?>
                 </div>
                 <div class = "containerButtonClickColumnTwo">
                 <!-- foreach -->
-                    <div class ="itemButtonClickColumnTwo"></div>
+                    <?php foreach($TableMoveImg as $item) { ?>
+                        <div class ="itemButtonClickColumnTwo"></div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
