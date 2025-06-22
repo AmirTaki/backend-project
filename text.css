@@ -1,0 +1,103 @@
+/* MEDIA SCREEN AND (MAX-WIDTH 1200PX) */
+@media screen and (max-width : 1200px) {
+    /* ITEM BOX SLIDER */
+    .itemBoxSlider{
+        width: 49.5%;
+        height: 99.5%;
+        margin: .25%;   
+        overflow: hidden;
+    }
+}
+
+/* ============================================================ @ MEDIA SCREEN AND MAX - WIDTH 930 PX =============================================================================== */
+@media screen and (max-width:930px) {
+    /* CONTAINER SLIDER IMAGE */
+    .containerSliderImg{
+        width: 390px;
+    }
+    /* CLICK LEFT & CLICK RIGHT SLIDER */
+    #clickLeftSlider, #clickRightSlider {
+        display: none !important;
+    }
+    /* CONTAINER ITEM COLUMN ONE , TWO */
+    .containerItemColumnOne, .containerItemColumnTwo{
+        display: none;
+    }   
+    /* CONTAINER ITEM COLUMN THERR */
+    .containerItemColumnThree{
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        width: 100%;
+    }
+    /* CONTAINER BUTTON */
+    .containerButton{
+        display: none;
+    }
+    /* CONTAINER BUTTON CLICK */
+    .containerButtonClick{
+        display: flex;
+        flex-flow: row wrap;   
+        width: 100%;
+        justify-content: center;
+    }
+    /* ITEM BUTTON CLICK */
+    .itembuttonclick{
+        margin-top: -90px;
+        height: 10px;
+        width: 25px;
+        background-color: rgb(230, 230, 230);
+        margin-right: 10px;
+        border-radius: 10px;
+    }
+    /* ITEM BUTTON CLICK NTH CHILD 1 */
+    .itembuttonclick:nth-child(1){
+        background-color: rgba(252, 5, 5, 0.655);
+    }
+}
+
+
+
+@media screen and (max-width:1300px) {
+    /* CONTAINER SLIDER IMAGE */
+    .containerSliderImg{
+        width: 760px;
+    }
+    /* CLICK LEFT * CLICK RIGHT SLIDER */
+    #clickLeftSlider, #clickRightSlider {
+        display: none !important;
+    }
+    /* CONTAINER ITEM COLUMN ONE */
+    .containerItemColumnOne {
+        display: none;
+    }
+    /* CONTAINER ITEM COLUMN TWO */
+    .containerItemColumnTwo{
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        width: 100%;
+    }
+    /* CONTAIINER BUTTON */
+    .containerButton{
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    /* TIEM BUTTON */
+    .itembutton{
+        margin-top: -90px;
+        height: 10px;
+        width: 25px;
+        background-color: rgb(230, 230, 230);
+        margin-right: 10px;
+        border-radius: 10px;
+    }
+    /* ITEM BUTTON NTH-CHILD () */
+    .itembutton:nth-child(1){
+        background-color: blue;
+    }
+}

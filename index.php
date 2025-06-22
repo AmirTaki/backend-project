@@ -70,61 +70,25 @@ $TableColumnImg =  readTable ("asus", "SELECT * FROM asus.column_img WHERE statu
             <?php } ?>
         </div>
         <!-- ==================================================   BOX SLIDER IMAGE  ===========================================================  -->
-        <div class = "boxSliderImage" style = "display:none">
-            <div class = "containerSliderImg" >
-                <?php for($i = 0; $i < sizeof($TableMoveImg); $i+=3){ ?>
-                    <div class = "containerItemColumnOne">
-                        <div class = "itemImg">
-                            <img src="<?= $TableMoveImg[$i]->path ?>" alt="">
-                            <div class = "captionItemSlider"><?= $TableMoveImg[$i]->body ?></div>
-                        </div>
-                        <div class = "itemImg">
-                            <img src="<?= $TableMoveImg[$i+1]->path ?>" alt="">
-                            <div class = "captionItemSlider"><?= $TableMoveImg[$i+1]->body ?></div>
-                        </div>
-                        <div class = "itemImg">
-                            <img src="<?= $TableMoveImg[$i+2]->path ?>" alt="">
-                            <div class = "captionItemSlider"><?= $TableMoveImg[$i+2]->body ?></div>
-                        </div>
-                    </div>
-                <?php } ?>
-             
-                <?php for($i = 0; $i < sizeof($TableMoveImg); $i+=2){ ?>
-                    <div class = "containerItemColumnTwo">
-                        <div class = "itemImg">
-                            <img src="<?= $TableMoveImg[$i]->path  ?>" alt="">
-                            <div class = "captionItemSlider"><?= $TableMoveImg[$i]->body ?></div>
-                        </div>
-                        <div class = "itemImg">
-                            <img src="<?= $TableMoveImg[$i+1]->path  ?>" alt="">
-                            <div class = "captionItemSlider"><?= $TableMoveImg[$i+1]->body ?></div>
-                        </div>
-                    </div>
-                <?php } ?>
-                
-                <!-- foreach  -->
-                <?php foreach($TableMoveImg as $item){ ?>
-                    <div class = "containerItemColumnThree">
-                        <div class = "itemImg">
-                            <img src="<?= $item->path ?>" alt="">
-                            <div class = "captionItemSlider"><?= $item->body ?></div>
-                        </div>
-                    </div>
-                <?php } ?>
+        <div class = "boxSliderImage">
+            <div class = "containerSliderImg">
+                <!-- foreach -->
+                <div class = "itemImg">
+                    <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
+                    <div class = "itemCaption">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, rem?</div>
+                </div>
             </div>
-            
             <div id = "clickLeftSlider">left</div>
             <div id = "clickRightSlider">right</div>
-            
-            <div class = "containerButton">
-                <?php for($i = 0; $i < sizeof($TableMoveImg) ; $i += 2) { ?>
-                    <div class = "itembutton"></div>
-                <?php } ?>
-            </div>
-            <div class = "containerButtonClick">
-                <?php foreach ($TableMoveImg as $item){ ?>
-                    <div class = "itembuttonclick"></div>
-                <?php } ?>
+            <div class = "containerButtonSlider">
+                <div class = "containerButtonClickColumnOne">
+                <!-- foreach -->
+                    <div class ="itemButtonClickColumnOne"></div>
+                </div>
+                <div class = "containerButtonClickColumnTwo">
+                <!-- foreach -->
+                    <div class ="itemButtonClickColumnTwo"></div>
+                </div>
             </div>
         </div>
         <!--  ================================================== GRID BOX IMAGE  ===========================================================  -->

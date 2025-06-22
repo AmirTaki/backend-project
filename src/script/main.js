@@ -22,73 +22,73 @@ iconRigthtScrollImg.addEventListener("click",(e)=>{
     containerScroll.scrollLeft += 600
 })
 /* ==================================================   BOX SLIDER IMAGE  =========================================================== */
-const clickLeftSlider =  document.getElementById("clickLeftSlider")
-const clickRightSlider = document.getElementById("clickRightSlider")
+const clickLeftSlider  = document.getElementById("clickLeftSlider")
+const clickRightSlider  = document.getElementById("clickRightSlider")
 const containerSliderImg = document.querySelector('.containerSliderImg')
-const itembutton = document.querySelectorAll(".itembutton")
-const itembuttonclick = document.querySelectorAll(".itembuttonclick")
-const containerItemColumnOne  = document.querySelectorAll(".containerItemColumnOne")
+const buttonClickOne = document.querySelectorAll(".itemButtonClickColumnOne")
+const buttonClickTwo = document.querySelectorAll(".itemButtonClickColumnTwo")
 
-// HIDEEN SHOW ICON CLICK LEFT RIGHT SLIDER
-const hideShowClickLeftRigth = () => {
-    clickLeftSlider.style.display = containerSliderImg.scrollLeft <= 150 ? "none" : "block"
-    clickRightSlider.style.display = containerSliderImg.scrollLeft >= containerSliderImg.scrollWidth - 1330   ? "none" : "block"
-}
-hideShowClickLeftRigth()
-
-// CONTAINER SLIDER IMAGE WHEEL
-containerSliderImg.addEventListener("wheel", (e)=>{
+containerSliderImg.addEventListener("wheel",(e)=>{
     e.preventDefault()
 })
-// CLICK LEFT SLIDER
-clickLeftSlider.addEventListener("click", (e)=> {
-    containerSliderImg.style.scrollBehavior = "smooth"
-    containerSliderImg.scrollLeft -= 1130
-    setTimeout(()=>{
-        hideShowClickLeftRigth()
-    }, 500)
-})
-// CLICK RIGHT SLIDER
-clickRightSlider.addEventListener("click", (e)=> {
 
-    containerSliderImg.style.scrollBehavior = "smooth"
-    containerSliderImg.scrollLeft += 1130
+const viewHideClickLeftRightSlider = () => {
     setTimeout(()=>{
-        hideShowClickLeftRigth()
-    }, 500)
-   
+        clickLeftSlider.style.display  = containerSliderImg.scrollLeft < 800 / 2 ? "none" : "block"
+        clickRightSlider.style.display = containerSliderImg.scrollLeft >= Math.round(containerSliderImg.scrollWidth) - window.innerWidth  ? "none" : "block"
+    }, 1000)
+}
+viewHideClickLeftRightSlider()
+
+const selectSizeContainerSliderImg = () => {
+if(window.innerWidth > 750){
+    return 800
+}
+else if(window.innerWidth <= 750 && window.innerWidth > 500){
+    return 500
+}
+else if (window.innerWidth <= 500)
+    return 300
+}
+
+const changeBackGroundColorButton = (list, color, bg = null) => {
+    list.forEach((item)=>{
+        item.style.backgroundColor = color
+    })
+    if(bg){list[0].style.backgroundColor = bg}
+}
+buttonClickOne.forEach((button, index)=>{
+    button.addEventListener("click", (e)=>{
+        changeBackGroundColorButton(buttonClickOne, "rgb(198, 195, 195)")
+        containerSliderImg.style.scrollBehavior = "smooth"
+        containerSliderImg.scrollLeft = index * selectSizeContainerSliderImg()
+        button.style.backgroundColor = "blue"
+    })
 })
-// FUNCTION CHANGE BACK GRAND COLOR BUTTON
-const changeBackGroundColorButton = (buttons, option = null, color = null) => {
-    buttons.forEach(button => {
-        button.style.backgroundColor = "rgb(230, 230, 230)"    
-    });
-    if(option) buttons[0].style.backgroundColor = color
-}
-// BUTTON CLCIK CONTAINER
-for (let i = 0; i < itembutton.length ; i ++){
-    itembutton[i].addEventListener("click", e=>{
+buttonClickTwo.forEach((button, index)=>{
+    button.addEventListener("click", (e)=>{
+        changeBackGroundColorButton(buttonClickTwo, "rgb(198, 195, 195)")
         containerSliderImg.style.scrollBehavior = "smooth"
-        containerSliderImg.scrollLeft = (i * 760 )
-        changeBackGroundColorButton(itembutton)
-        itembutton[i].style.backgroundColor = "blue"
+        containerSliderImg.scrollLeft = index * selectSizeContainerSliderImg()
+        button.style.backgroundColor = "red"
     })
-}
-// BUTTON CLICK CONTAINER
-for (let i = 0; i < itembuttonclick.length; i++){
-    itembuttonclick[i].addEventListener("click", e => {
-        containerSliderImg.style.scrollBehavior = "smooth"
-        containerSliderImg.scrollLeft =  ( i * 390)
-        changeBackGroundColorButton(itembuttonclick)
-        itembuttonclick[i].style.backgroundColor = " rgba(252, 5, 5, 0.655)"
-       
-    })
-}
+})
+clickLeftSlider.addEventListener("click",(e)=> {
+containerSliderImg.style.scrollBehavior = "smooth"
+containerSliderImg.scrollLeft -= selectSizeContainerSliderImg()
+viewHideClickLeftRightSlider()
+})
+clickRightSlider.addEventListener("click",(e)=> {
+containerSliderImg.style.scrollBehavior = "smooth"
+containerSliderImg.scrollLeft += selectSizeContainerSliderImg()
+viewHideClickLeftRightSlider()
+})
 // FUNCTION SCROLL BEHAVIOR CONATINER SLIDER IMAGE
 const scrollBehaviorContainerSliderImage = () => {
-   containerSliderImg.style.scrollBehavior = "smooth"
-   containerSliderImg.scrollLeft = 0  
+containerSliderImg.style.scrollBehavior = "smooth"
+containerSliderImg.scrollLeft = 0  
 }
+
 /* ================================================== GRID BOX IMAGE  =========================================================== */
 const leftBoxSlider = document.getElementById("leftBoxSlider")
 const rightBoxSlider = document.getElementById('rightBoxSlider')
@@ -142,11 +142,11 @@ const resizeContainerBox = () => {
 
 // WINDOW RESIZE EVENT LISTENER
 window.addEventListener('resize', (e)=>{
-   /* ==================================================  CONTAINER SLIDER IMAGE  =========================================================== */
-    hideShowClickLeftRigth() 
+   /* ==================================================  BOX SLIDER IMAGE  =========================================================== */
     scrollBehaviorContainerSliderImage()
-    changeBackGroundColorButton (itembutton, option = "first", color = "blue")
-    changeBackGroundColorButton (itembuttonclick, option = 'first', color = " rgba(252, 5, 5, 0.655)" )    
+    viewHideClickLeftRightSlider()
+    changeBackGroundColorButton(buttonClickOne, "rgb(198, 195, 195)", "blue")
+    changeBackGroundColorButton(buttonClickTwo, "rgb(198, 195, 195)", "red") 
     /* ================================================== GRID BOX IMAGE  =========================================================== */
     resizeContainerBox()
     viewHideClickLeftRight()
