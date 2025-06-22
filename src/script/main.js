@@ -29,7 +29,7 @@ const buttonClickOne = document.querySelectorAll(".itemButtonClickColumnOne")
 const buttonClickTwo = document.querySelectorAll(".itemButtonClickColumnTwo")
 
 containerSliderImg.addEventListener("wheel",(e)=>{
-    e.preventDefault()
+    // e.preventDefault()
 })
 
 const viewHideClickLeftRightSlider = () => {
@@ -96,7 +96,7 @@ const containerBox = document.querySelector(".containerBoxSlider")
 const itemClick = document.querySelectorAll(".itemClickBoxSlider")
 
 containerBox.addEventListener("wheel", (e)=>{
-    e.preventDefault();
+    // e.preventDefault();
 })
 const changeBackgroundColorItemClick =  (optional = null) => {
     itemClick.forEach((item)=>{
@@ -141,7 +141,7 @@ const containerImageAnimation = document.querySelector(".containerImageAnimation
 const itemImageAnimation = document.querySelectorAll(".itemImageAnimation")
 
 containerImageAnimation.addEventListener("wheel", (e)=>{
-    e.preventDefault();
+    // e.preventDefault();
 })
 
 const sizeContainerImageAnimation = () => {
@@ -194,10 +194,8 @@ itemContainerColumn.forEach((item, index) => {
             let columns =  itemContainer[index].querySelectorAll(".itemToMenu")
             if(checkHeightItemContainer(columns)){
                 columnHight(columns, 0)
-                //  console.log("ok")
             }
             else{
-                console.log("ok")
                 columnHight(itemToMenu, 0)
                 columnHight(columns, "40px")
             }

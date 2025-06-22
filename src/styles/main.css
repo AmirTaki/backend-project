@@ -633,7 +633,6 @@
     /*  ================================================== MENU MAIN COLUMN  ===========================================================   */
     .containerMenuMain{
         text-align: left;
-        /* display: flex; */
         height: 0px;
     }
     .menuConatainer{
@@ -654,7 +653,7 @@
         background-color: transparent;
         margin : 0;
         margin-bottom: 10px ;
-        padding: .47% 2%;
+        padding: .47% 5%;
         background-color: transparent;
         overflow: hidden ;    
         display: flex; 
