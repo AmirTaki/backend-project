@@ -11,6 +11,8 @@ $TableGridImg =  readTable ("asus", "SELECT * FROM asus.grid_img WHERE status = 
 $TableMoveImg =  readTable ("asus", "SELECT * FROM asus.move_img WHERE status = 10", $single = false, $execute = null);
 $TableColumnImg =  readTable ("asus", "SELECT * FROM asus.column_img WHERE status = 10", $single = false, $execute = null);
 $backgroundTable = readTable('nike', "SELECT * FROM nike.background WHERE status = 10", $single = false, $execute = null) ;
+$titleColumnTable = readTable('nike', "SELECT * FROM nike.title_column WHERE status = 10", $single = false, $execute = null) ;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -132,6 +134,21 @@ $backgroundTable = readTable('nike', "SELECT * FROM nike.background WHERE status
                 </div>
             <?php } ?>
         </div>
+        <!--  ================================================== MENU MAIN COLUMN  ===========================================================  -->
+        <div class = "containerMenuMain">
+            <div class = "menuConatainer">
+                <!-- foreach -->
+                <?php foreach($titleColumnTable as $title) {?>
+                    <div class = "itemContainer">
+                        <div class = "itemContainerColumn"><?= $title->title ?></div>
+                        <!-- foreach -->
+                        <div class = "itemToItemContainer">
+                            <div class= "itemToMenu">item</div>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div> 
     </main>
     <!-- header -->
     <script src = "./src/script/header.js"></script>
