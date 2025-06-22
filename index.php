@@ -10,6 +10,7 @@ $TableScrollerImage =  readTable ("adidas", "SELECT * FROM adidas.scrollerimg_ma
 $TableGridImg =  readTable ("asus", "SELECT * FROM asus.grid_img WHERE status = 10", $single = false, $execute = null);
 $TableMoveImg =  readTable ("asus", "SELECT * FROM asus.move_img WHERE status = 10", $single = false, $execute = null);
 $TableColumnImg =  readTable ("asus", "SELECT * FROM asus.column_img WHERE status = 10", $single = false, $execute = null);
+$backgroundTable = readTable('nike', "SELECT * FROM nike.background WHERE status = 10", $single = false, $execute = null) ;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -124,21 +125,12 @@ $TableColumnImg =  readTable ("asus", "SELECT * FROM asus.column_img WHERE statu
         </div>
         <!--  ================================================== IMAGE ANIMATION SCROLL  ===========================================================  -->
         <div class = "containerImageAnimation">
-            <div class = "itemImageAnimation">
-                <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
-            </div>
-            <div class = "itemImageAnimation">
-                <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
-            </div>
-            <div class = "itemImageAnimation">
-                <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-pixabay-33545.jpg" alt="">
-            </div>
-            <div class = "itemImageAnimation">
-                <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg" alt="">
-            </div>
-            <div class = "itemImageAnimation">
-                <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
-            </div>
+            <!-- foreach -->
+            <?php foreach($backgroundTable as $item)  {?>
+                <div class = "itemImageAnimation">
+                    <img src="<?= $item->path ?>" alt="">
+                </div>
+            <?php } ?>
         </div>
     </main>
     <!-- header -->
