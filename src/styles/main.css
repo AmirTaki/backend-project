@@ -578,8 +578,11 @@
         background-color: red;
     }
     /*   ================================================== IMAGE ANIMATION SCROLL  ===========================================================  */
-   .containerImageAnimation{
-        height: 450px;
+    .containerImageAnimation{
+        height: 330px;
+    }
+    .itemImageAnimation img {
+        object-fit:cover;
     }
 }
 

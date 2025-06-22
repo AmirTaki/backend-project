@@ -145,7 +145,7 @@ containerImageAnimation.addEventListener("wheel", (e)=>{
 })
 
 const sizeContainerImageAnimation = () => {
-    return window.innerWidth <= 750 ? 450 : 600; 
+    return window.innerWidth <= 750 ? 330 : 600; 
 }
 
 const containerImageAnimationResize = () => {
