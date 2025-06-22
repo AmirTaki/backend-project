@@ -41,11 +41,11 @@ const viewHideClickLeftRightSlider = () => {
 viewHideClickLeftRightSlider()
 
 const selectSizeContainerSliderImg = () => {
-if(window.innerWidth > 750){
-    return 800
+if(window.innerWidth > 1200){
+    return 900
 }
-else if(window.innerWidth <= 750 && window.innerWidth > 500){
-    return 500
+else if(window.innerWidth <= 1200 && window.innerWidth > 500){
+    return 700
 }
 else if (window.innerWidth <= 500)
     return 300

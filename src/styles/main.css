@@ -262,7 +262,7 @@
     position: relative;
 }
 .containerSliderImg{
-    width: 800px;
+    width: 900px;
     height: 50%;
     background-color: transparent;
     display: flex;
@@ -416,6 +416,40 @@
         margin: .25%;   
         overflow: hidden;
     }
+    /*    =========================================================    BOX SLIDER IMAGE   ===================================================== */
+    .containerSliderImg{
+        width: 700px;
+    }
+    .itemImg{
+        width: 48%;
+        height: 98%;
+    }
+    #clickLeftSlider ,#clickRightSlider{
+        display: none !important;
+    }
+    .containerButtonSlider{
+        display: flex;
+    }
+    .containerButtonClickColumnOne{
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .itemButtonClickColumnOne{
+        width: 20px;
+        height: 10px;
+        margin-right: 10px;
+        background-color: rgb(198, 195, 195);
+        border-radius: 10px;
+    }
+    .itemButtonClickColumnOne:nth-child(1){
+        background-color: blue;
+    }
+    .itemButtonClickColumnOne:hover {
+        cursor: pointer;
+    }
+    .containerButtonClickColumnTwo{
+        display: none;
+    }
 }
 /*    ========================================================= @media screen maxx-width : 750px  ===================================================== */
 @media screen and (max-width:750px) {
@@ -488,40 +522,7 @@
     .clasifierCaptionButton{
         width: 60%;
     }
-    /*    =========================================================    BOX SLIDER IMAGE   ===================================================== */
-    .containerSliderImg{
-        width: 500px;
-    }
-    .itemImg{
-        width: 48%;
-        height: 98%;
-    }
-    #clickLeftSlider ,#clickRightSlider{
-        display: none !important;
-    }
-    .containerButtonSlider{
-        display: flex;
-    }
-    .containerButtonClickColumnOne{
-        display: flex;
-        flex-flow: row nowrap;
-    }
-    .itemButtonClickColumnOne{
-        width: 20px;
-        height: 10px;
-        margin-right: 10px;
-        background-color: rgb(198, 195, 195);
-        border-radius: 10px;
-    }
-    .itemButtonClickColumnOne:nth-child(1){
-        background-color: blue;
-    }
-    .itemButtonClickColumnOne:hover {
-        cursor: pointer;
-    }
-    .containerButtonClickColumnTwo{
-        display: none;
-    }
+    
 
     /* ================================================== GRID BOX IMAGE  =========================================================== */
     /*  ITEM BOX SLIDER */
