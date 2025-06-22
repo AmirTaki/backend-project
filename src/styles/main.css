@@ -404,6 +404,26 @@
 .containerClickBoxSlider{
     display: none
 }
+/*   ================================================== IMAGE ANIMATION SCROLL  ===========================================================  */
+.containerImageAnimation{
+    background-color: transparent;
+    width: 100%;
+    height: 600px;
+    overflow-y: scroll;
+}
+.containerImageAnimation::-webkit-scrollbar{
+    display: none;
+}
+.itemImageAnimation{
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+}
+.itemImageAnimation img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 /*========================================================================= @ MEDIA SCREEN AND MAX - WIDTH 1300 PX ==================================================================================*/
 
 /*========================================================================= @ MEDIA SCREEN AND MAX - WIDTH 1200 PX ==================================================================================*/
@@ -556,6 +576,10 @@
     }
     .itemClickBoxSlider:nth-child(1){
         background-color: red;
+    }
+    /*   ================================================== IMAGE ANIMATION SCROLL  ===========================================================  */
+   .containerImageAnimation{
+        height: 450px;
     }
 }
 

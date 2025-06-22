@@ -136,8 +136,33 @@ const resizeContainerBox = () => {
     containerBox.style.scrollBehavior = "smooth"
     containerBox.scrollLeft = 0 
 }
+/*   ================================================== IMAGE ANIMATION SCROLL  ===========================================================  */
+const containerImageAnimation = document.querySelector(".containerImageAnimation")
+const itemImageAnimation = document.querySelectorAll(".itemImageAnimation")
 
+containerImageAnimation.addEventListener("wheel", (e)=>{
+    e.preventDefault();
+})
 
+const sizeContainerImageAnimation = () => {
+    return window.innerWidth <= 750 ? 450 : 600; 
+}
+
+const containerImageAnimationResize = () => {
+    containerImageAnimation.style.scrollBehavior = "smooth"
+    containerImageAnimation.scrollTop  = 0
+}
+
+const changeImageMoveAnimation = () => {
+    containerImageAnimation.style.scrollBehavior = "smooth"
+    containerImageAnimation.scrollTop += sizeContainerImageAnimation()
+    if(containerImageAnimation.scrollTop  >= containerImageAnimation.scrollHeight - sizeContainerImageAnimation() ){
+        containerImageAnimationResize()
+    }
+}
+setInterval(()=>{
+    changeImageMoveAnimation()
+}, 3000)
 
 
 // WINDOW RESIZE EVENT LISTENER
@@ -151,4 +176,7 @@ window.addEventListener('resize', (e)=>{
     resizeContainerBox()
     viewHideClickLeftRight()
     changeBackgroundColorItemClick("optional")
+    /*   ================================================== IMAGE ANIMATION SCROLL  ===========================================================  */
+    containerImageAnimationResize()
+
 })

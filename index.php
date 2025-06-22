@@ -122,6 +122,24 @@ $TableColumnImg =  readTable ("asus", "SELECT * FROM asus.column_img WHERE statu
                 </div>
             </div>
         </div>
+        <!--  ================================================== IMAGE ANIMATION SCROLL  ===========================================================  -->
+        <div class = "containerImageAnimation">
+            <div class = "itemImageAnimation">
+                <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
+            </div>
+            <div class = "itemImageAnimation">
+                <img src="C:\Users\ASUS\Desktop\backup_img\alienware-8k-amoled-3840x2160-14350.jpeg" alt="">
+            </div>
+            <div class = "itemImageAnimation">
+                <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-pixabay-33545.jpg" alt="">
+            </div>
+            <div class = "itemImageAnimation">
+                <img src="C:\Users\ASUS\Desktop\usb_driver_programming\css advance\pexels-mccutcheon-1191710.jpg" alt="">
+            </div>
+            <div class = "itemImageAnimation">
+                <img src="C:\Users\ASUS\Downloads\pexels-marcelo-jaboo-219257-715995.jpg" alt="">
+            </div>
+        </div>
     </main>
     <!-- header -->
     <script src = "./src/script/header.js"></script>
