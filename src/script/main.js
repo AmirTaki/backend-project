@@ -107,7 +107,7 @@ const changeBackgroundColorItemClick =  (optional = null) => {
 itemClick.forEach((item, index) => {
     item.addEventListener("click", (e)=>{
         containerBox.style.scrollBehavior = "smooth"
-        containerBox.scrollLeft = index * window.innerWidth 
+        containerBox.scrollLeft = index * (window.innerWidth - 10) 
         changeBackgroundColorItemClick()
         itemClick[index].style.backgroundColor = "red"
     })
@@ -122,13 +122,13 @@ const viewHideClickLeftRight = () => {
 viewHideClickLeftRight()
 leftBoxSlider.addEventListener("click", (e)=>{
     containerBox.style.scrollBehavior = "smooth"
-    containerBox.scrollLeft -= window.innerWidth 
+    containerBox.scrollLeft -= window.innerWidth  - 10
     viewHideClickLeftRight()
 
 })
 rightBoxSlider.addEventListener("click", (e)=>{
     containerBox.style.scrollBehavior = "smooth"
-    containerBox.scrollLeft += window.innerWidth 
+    containerBox.scrollLeft += window.innerWidth - 10
     viewHideClickLeftRight()
 
 })

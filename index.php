@@ -70,7 +70,7 @@ $TableColumnImg =  readTable ("asus", "SELECT * FROM asus.column_img WHERE statu
             <?php } ?>
         </div>
         <!-- ==================================================   BOX SLIDER IMAGE  ===========================================================  -->
-        <div class = "boxSliderImage">
+        <div class = "boxSliderImage" style = "display:none">
             <div class = "containerSliderImg" >
                 <?php for($i = 0; $i < sizeof($TableMoveImg); $i+=3){ ?>
                     <div class = "containerItemColumnOne">
