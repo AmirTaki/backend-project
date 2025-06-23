@@ -426,49 +426,46 @@
 }
 /*  ================================================== MENU MAIN COLUMN  ===========================================================   */
 .containerMenuMain{
-    padding: 50px 0;
-    height: 700px;
-    text-align: left;
+    height: 600px;
     background-color: transparent;
 }
 .menuConatainer{
-    width: 90%;
     background-color: transparent;
-    height: 25% ;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    margin: auto;
+    height:20%;
     overflow: hidden;
-    transition: height .5s ;
-    border-bottom: 1px solid gray ;           
+    transition: height .5s;
+    margin: 10px 20px;
+    border-bottom: 1px solid rgb(224, 220, 220);
+
 }
-.menuConatainer:hover {
+.menuConatainer:hover{
     height: 100%;
 }
-.itemContainer{
-    background-color: transparent;
-    margin: 0 3%;
-    font-size: 17px;
-    color: rgb(78, 78, 78);
+.itemContainer {
+    margin:0 5%;
 }
-.itemToItemContainer{
-    /* padding-top: 20px; */
+.itemContainerColumn{
+    color: gray;
     background-color: transparent;
+    font-size: 18px;
+}
+.itemToItem{
+    background-color: transparent;
+    padding: 10px 0;
 }
 .itemToMenu{
-    color: gray;
-    margin-top: 5px;
-    padding:  10px 5px;
-    padding-left: 0;
-    font-size: 15px;
-    transition: color .5s,text-decoration .5s ;
+    color: rgb(172, 172, 172);
+    padding: 10px 1px ;
+    background-color: transparent;
+    transition: color .5s;
 }
 .itemToMenu:hover {
-    color:rgb(64, 64, 64);
+    color : rgb(88, 88, 88);
     cursor: pointer;
     text-decoration: underline;
-    
 }
 /*========================================================================= @ MEDIA SCREEN AND MAX - WIDTH 1300 PX ==================================================================================*/
 
@@ -631,54 +628,39 @@
         object-fit:cover;
     }
     /*  ================================================== MENU MAIN COLUMN  ===========================================================   */
-    .containerMenuMain{
-        text-align: left;
-        height: 0px;
-    }
     .menuConatainer{
-        background-color: transparent;
+        display: flex;
         flex-flow: column nowrap;
-        /* align-items: left   ; */
-        justify-content: center;
-        height: auto ;
         width: 100%;
-        overflow: hidden;
-        border-bottom: none;
-    }   
-    .menuConatainer:hover {
-        height: auto;
+        background-color: transparent;
+        height: 100%;
+        border: none;
+        margin : 0;
+        align-items: start;
+        justify-content: start;
     }
     .itemContainer{
-        z-index: 3 ;
+        margin:0 ;
         background-color: transparent;
-        margin : 0;
-        margin-bottom: 10px ;
-        padding: .47% 5%;
+    }
+    .itemToItem{
         background-color: transparent;
-        overflow: hidden ;    
-        display: flex; 
+        height: 0;
+        padding: 0;
+        padding-top: 10px;
+        overflow: hidden;
+        transition: height .5s ; 
+        display: flex;
         flex-flow: column nowrap;
     }
-    .itemToItemContainer{
-        padding-top: 0;
+    .itemContainerColumn{
+        padding: 10px;
         background-color: transparent;
     }
-
     .itemToMenu{
-        background-color: transparent ;
-        height: 0; 
-        margin-top: 0 ;
-        padding:  0;
-        padding-left: 10px;
-        transition: height .5s;
-        width: 100%;
-        background-color: transparent;
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        overflow: hidden;
-        justify-content: space-between;
-    } 
+        padding: 10px 30px;
+        /* background-color: red; */
+    }
 }
 
 /*    ========================================================= @media screen maxx-width : 500px  ===================================================== */

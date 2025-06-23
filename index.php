@@ -142,18 +142,19 @@ $itemColumnTable = readTable('nike', "SELECT * FROM nike.item_column WHERE statu
                 <?php foreach($titleColumnTable as $title) {?>
                     <div class = "itemContainer">
                         <div class = "itemContainerColumn"><?= $title->title ?></div>
-                        <!-- foreach -->
-                        <?php foreach($itemColumnTable as $category) {
-                            if($title->title === $category->title) {
-                        ?>
-                            <div class = "itemToItemContainer">
+                        <div class = "itemToItem">
+                            <!-- foreach -->
+                            <?php foreach($itemColumnTable as $category) {
+                                if($title->title === $category->title) {
+                            ?>
                                 <div class= "itemToMenu"><?= $category->category ?></div>
-                            </div>
-                        <?php }} ?>
+                            <?php }} ?>
+                        </div>
                     </div>
                 <?php } ?>
             </div>
-        </div> 
+        </div>
+
     </main>
     <!-- header -->
     <script src = "./src/script/header.js"></script>

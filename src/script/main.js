@@ -165,44 +165,33 @@ setInterval(()=>{
 }, 3000)
 
 /*  ================================================== MENU MAIN COLUMN  ===========================================================   */
-const itemContainerColumn = document.querySelectorAll('.itemContainerColumn')
-const itemContainer = document.querySelectorAll(".itemContainer")
-const itemToItemContainer  = document.querySelectorAll(".itemToItemContainer")
-const itemToMenu = document.querySelectorAll(".itemToMenu")
+const itemContainerColumn = document.querySelectorAll(".itemContainerColumn")
+const containerItem = document.querySelectorAll(".itemToItem")
 
-const columnHight = (columns, height) => {   
-    columns.forEach(column => {
-        column.style.height = height   
-    });
-    
-}
-const HieghItemToMenuResize = () => {
-    window.innerWidth < 750 ?  columnHight(itemToMenu, 0) : columnHight(itemToMenu, "auto")
+const CheckHiehtContainerItem = (index) => {
+    return containerItem[index].style.height === "100%" ? true : false
 }
 
-const checkHeightItemContainer = (items) => {
-    for(let i = 0; i < items.length; i ++){
-        if(items[i].style.height === "40px"){
-            return true
-        }
-    }   
-}
-
-itemContainerColumn.forEach((item, index) => {
-    item.addEventListener("click", (e)=>{
-        if(window.innerWidth < 750){
-            let columns =  itemContainer[index].querySelectorAll(".itemToMenu")
-            if(checkHeightItemContainer(columns)){
-                columnHight(columns, 0)
-            }
-            else{
-                columnHight(itemToMenu, 0)
-                columnHight(columns, "40px")
-            }
-        }    
+const closeContainerItem = () => {
+    containerItem.forEach(item=>{
+        item.style.height = 0
     })
-});
+}
 
+
+itemContainerColumn.forEach((column,index) => {
+    column.addEventListener("click", (e)=>{
+        if(window.innerWidth < 750){
+            if(CheckHiehtContainerItem(index)){
+            closeContainerItem()
+            }
+            else {
+                closeContainerItem()
+                containerItem[index].style.height = "100%"
+            }
+        }
+    })            
+});
 // WINDOW RESIZE EVENT LISTENER
 window.addEventListener('resize', (e)=>{
    /* ==================================================  BOX SLIDER IMAGE  =========================================================== */
@@ -217,6 +206,7 @@ window.addEventListener('resize', (e)=>{
     /*   ================================================== IMAGE ANIMATION SCROLL  ===========================================================  */
     containerImageAnimationResize()
     /*  ================================================== MENU MAIN COLUMN  ===========================================================   */
-    HieghItemToMenuResize()
+    closeContainerItem()
+
 
 })
