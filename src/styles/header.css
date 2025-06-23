@@ -22,12 +22,16 @@ body::-webkit-scrollbar-thumb:hover {
 /* HEADER */
 .header{
     box-shadow: 1px 5px 10px rgba(0, 0, 0, .3);   
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(200, 0, 0);
     height: 50px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;  
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 5;
 }
 /* ICON MENU */
 .iconMenu{
