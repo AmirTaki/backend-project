@@ -24,6 +24,8 @@ $itemColumnTable = readTable('nike', "SELECT * FROM nike.item_column WHERE statu
     <link rel="stylesheet" href="./src/styles/header.css">
     <!-- main -->
     <link rel="stylesheet" href="./src/styles/main.css">
+    <!-- footer  -->
+    <link rel="stylesheet" href="./src/styles/footer.css">
     <!-- bootstrap 5 -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> -->
     <title>Project</title>
@@ -153,11 +155,11 @@ $itemColumnTable = readTable('nike', "SELECT * FROM nike.item_column WHERE statu
                 <?php } ?>
             </div>
         </div>
-        <!--  ================================================== FOOTER  ===========================================================  -->
-        <footer>
-            <?php require_once "./layouts/footer.php" ?>
-        </footer>
     </main>
+    <!--  ================================================== FOOTER  ===========================================================  -->
+    <footer>
+        <?php require_once "./layouts/footer.php" ?>
+    </footer>
     <!-- header -->
     <script src = "./src/script/header.js"></script>
     <!-- main -->

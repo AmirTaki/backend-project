@@ -1,7 +1,67 @@
 /* ===================================================== FOOTER =================================================================== */
-footer {
+.board-black{
     width: 100%;
+    background-color: black;
+    color:white;
+    padding: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.board-black-title {
+    line-height: 35px !important;   
+}
+.board-black div {
+    width: 60%;
+    margin: 20px 50px;
+    line-height: 25px;
+}
+.board-yellow{
+    background-color: yellow;
+    width: 100%;
+    height: 150px;
+    display: flex; 
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.board-yellow-title{
+    font-size: 20px;
+    font-weight: 700;
+}
+.board-yellow-button button{
+    margin-left: 30px;
+    padding: 30px 20px ;
+    height: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 300px;
+    background-color: black;
+    color: white;
+    font-size: medium;
+    transition: color .5s , box-shadow .5s;
+    position: relative;
+}
+.board-yellow-button-i{
+    transition: left 1s;
+}
+.board-yellow-button button:hover .board-yellow-button-i{
+    left : 90%
+}
+.board-yellow-button button:hover{
+    cursor: pointer;
+    color:wheat;
+    box-shadow: 10px 10px 0px rgb(0 ,0, 0);
+}
+.board-yellow-button  button i {
     position: absolute;
+    left : 60%
+}
+.footer {
+    width: 100%;
+    /* position: absolute; */
     bottom: 0;
     background: linear-gradient(to right, #00093c, #2d0b00);
     color : #fff;
@@ -143,6 +203,30 @@ hr {
     }
 }
 
+
+
+
+       
+@media screen and (max-width:750px) {
+    .board-black div{
+        width:70% ;
+        
+    }
+    .board-yellow{
+        text-align: center;
+        height: 300px;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .board-yellow-title{
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .board-yellow-button{
+        margin: 50px 0;
+    }
+}
 @media screen and (max-width : 700px) {
     footer {
         bottom: unset;
