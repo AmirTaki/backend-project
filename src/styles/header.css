@@ -410,6 +410,7 @@ body::-webkit-scrollbar-thumb:hover {
         height: 0;
         border: none;
         padding-left: 0;
+        transition: height .5s;
     }
     
     /* ARROW RIGHT TITLE */

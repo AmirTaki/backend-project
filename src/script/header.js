@@ -9,6 +9,7 @@ let backCountaienr = document.querySelectorAll(".backCountaienr")
 let crossContainerSidebar = document.querySelectorAll('.crossContainer-sidebar')
 let searchInputIcon = document.querySelector("#searchIcon")
 let InputSearchHeader = document.querySelector(".InputSearchHeader")
+let menuTitle = document.querySelectorAll(".menuItem")
 
 // MOVE ANIMATION SIDEBAR
 iconMenu.addEventListener("click", (e)=>{
@@ -116,6 +117,14 @@ itemTitle.forEach((title, index) => {
            let size = list.querySelectorAll(".listTitle").length
            size *= 35;
            list.style.height =  `${size}px`
+        }
+    })
+});
+menuTitle.forEach((title, index) => {
+    title.addEventListener("mouseleave", (e)=>{
+        if (window.innerWidth < 750){
+           let list =  document.querySelectorAll(".listContainer")[index]
+           list.style.height =  0
         }
     })
 });
