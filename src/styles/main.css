@@ -426,7 +426,7 @@
 }
 /*  ================================================== MENU MAIN COLUMN  ===========================================================   */
 .containerMenuMain{
-    height: 600px;
+    /* height: 600px; */
     background-color: transparent;
 }
 .menuConatainer{
@@ -434,7 +434,7 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    height:20%;
+    height:200px;
     overflow: hidden;
     transition: height .5s;
     margin: 10px 20px;
@@ -442,7 +442,7 @@
 
 }
 .menuConatainer:hover{
-    height: 100%;
+    height: 600px ;
 }
 .itemContainer {
     margin:0 5%;
@@ -639,6 +639,9 @@
         align-items: start;
         justify-content: start;
     }
+    .menuConatainer:hover{
+       height: 100% ;
+    }
     .itemContainer{
         margin:0 ;
         background-color: transparent;
@@ -652,6 +655,8 @@
         transition: height .5s ; 
         display: flex;
         flex-flow: column nowrap;
+        /* overflow: scroll; */
+    
     }
     .itemContainerColumn{
         padding: 10px;

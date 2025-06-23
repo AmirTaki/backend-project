@@ -168,8 +168,15 @@ setInterval(()=>{
 const itemContainerColumn = document.querySelectorAll(".itemContainerColumn")
 const containerItem = document.querySelectorAll(".itemToItem")
 
+
+const heightSizeItemToMenu = (index) => {
+    const items =  containerItem[index].querySelectorAll(".itemToMenu")
+    const hight = items.length * 40
+    return hight;
+}
+ 
 const CheckHiehtContainerItem = (index) => {
-    return containerItem[index].style.height === "100%" ? true : false
+    return containerItem[index].style.height >= "10px" ? true : false
 }
 
 const closeContainerItem = () => {
@@ -187,7 +194,7 @@ itemContainerColumn.forEach((column,index) => {
             }
             else {
                 closeContainerItem()
-                containerItem[index].style.height = "100%"
+                containerItem[index].style.height = `${heightSizeItemToMenu(index)}px`
             }
         }
     })            
