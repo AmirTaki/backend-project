@@ -128,13 +128,22 @@ menuTitle.forEach((title, index) => {
         }
     })
 });
+const sizeHeaderListContanier = (height) => {
+    listContainer.forEach(list => {
+        list.style.height =  height
+    });
+}
+
+
 // WINDOW ADD EVENET RESIZE 
 window.addEventListener('resize', (e)=>{
     if(window.innerWidth < 750){
+        sizeHeaderListContanier(0) 
         menuContainer.style.display = "none"
         closePageContainerSidebar()//
     }
     else {
+        sizeHeaderListContanier("600px")
         menuContainer.style.display = "flex"
         // pageContainer[0].style.display = "block"//
 

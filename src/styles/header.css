@@ -58,11 +58,11 @@ body::-webkit-scrollbar-thumb:hover {
 }
 /* LIST CONTAINER */
 .listContainer{
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(247, 247, 247) ;
     position: fixed;
     left: 0;
     padding-left: 100px;
-    height: 600px;
+    height: 600px ;
     top:50px;
     width: 25%;
     display: none;
