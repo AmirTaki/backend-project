@@ -27,7 +27,6 @@ $itemColumnTable = readTable('nike', "SELECT * FROM nike.item_column WHERE statu
     <!-- bootstrap 5 -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> -->
     <title>Project</title>
-  
 </head>
 <body>
     <header>
@@ -154,55 +153,10 @@ $itemColumnTable = readTable('nike', "SELECT * FROM nike.item_column WHERE statu
                 <?php } ?>
             </div>
         </div>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores culpa est quia eius laudantium mollitia vero itaque totam, dignissimos iusto. Commodi repudiandae quaerat dolores sapiente nemo non voluptatibus officia!
-        </div>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores culpa est quia eius laudantium mollitia vero itaque totam, dignissimos iusto. Commodi repudiandae quaerat dolores sapiente nemo non voluptatibus officia!
-        </div>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores culpa est quia eius laudantium mollitia vero itaque totam, dignissimos iusto. Commodi repudiandae quaerat dolores sapiente nemo non voluptatibus officia!
-        </div>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores culpa est quia eius laudantium mollitia vero itaque totam, dignissimos iusto. Commodi repudiandae quaerat dolores sapiente nemo non voluptatibus officia!
-        </div>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores culpa est quia eius laudantium mollitia vero itaque totam, dignissimos iusto. Commodi repudiandae quaerat dolores sapiente nemo non voluptatibus officia!
-        </div>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores culpa est quia eius laudantium mollitia vero itaque totam, dignissimos iusto. Commodi repudiandae quaerat dolores sapiente nemo non voluptatibus officia!
-        </div>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores culpa est quia eius laudantium mollitia vero itaque totam, dignissimos iusto. Commodi repudiandae quaerat dolores sapiente nemo non voluptatibus officia!
-        </div>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores culpa est quia eius laudantium mollitia vero itaque totam, dignissimos iusto. Commodi repudiandae quaerat dolores sapiente nemo non voluptatibus officia!
-        </div>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores culpa est quia eius laudantium mollitia vero itaque totam, dignissimos iusto. Commodi repudiandae quaerat dolores sapiente nemo non voluptatibus officia!
-        </div>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores culpa est quia eius laudantium mollitia vero itaque totam, dignissimos iusto. Commodi repudiandae quaerat dolores sapiente nemo non voluptatibus officia!
-        </div>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores culpa est quia eius laudantium mollitia vero itaque totam, dignissimos iusto. Commodi repudiandae quaerat dolores sapiente nemo non voluptatibus officia!
-        </div>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores culpa est quia eius laudantium mollitia vero itaque totam, dignissimos iusto. Commodi repudiandae quaerat dolores sapiente nemo non voluptatibus officia!
-        </div>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores culpa est quia eius laudantium mollitia vero itaque totam, dignissimos iusto. Commodi repudiandae quaerat dolores sapiente nemo non voluptatibus officia!
-        </div>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores culpa est quia eius laudantium mollitia vero itaque totam, dignissimos iusto. Commodi repudiandae quaerat dolores sapiente nemo non voluptatibus officia!
-        </div>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores culpa est quia eius laudantium mollitia vero itaque totam, dignissimos iusto. Commodi repudiandae quaerat dolores sapiente nemo non voluptatibus officia!
-        </div>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolores culpa est quia eius laudantium mollitia vero itaque totam, dignissimos iusto. Commodi repudiandae quaerat dolores sapiente nemo non voluptatibus officia!
-        </div>
-
+        <!--  ================================================== FOOTER  ===========================================================  -->
+        <footer>
+            <?php require_once "./layouts/footer.php" ?>
+        </footer>
     </main>
     <!-- header -->
     <script src = "./src/script/header.js"></script>
