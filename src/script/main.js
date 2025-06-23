@@ -150,13 +150,15 @@ const sizeContainerImageAnimation = () => {
 
 const containerImageAnimationResize = () => {
     containerImageAnimation.style.scrollBehavior = "smooth"
-    containerImageAnimation.scrollTop  = 0
+    containerImageAnimation.scrollLeft  = 0
 }
 
 const changeImageMoveAnimation = () => {
     containerImageAnimation.style.scrollBehavior = "smooth"
-    containerImageAnimation.scrollTop += sizeContainerImageAnimation()
-    if(containerImageAnimation.scrollTop  >= containerImageAnimation.scrollHeight - sizeContainerImageAnimation() ){
+    containerImageAnimation.scrollLeft += window.innerWidth - 10
+    console.log(containerImageAnimation.scrollLeft)
+    console.log(containerImageAnimation.scrollWidth)
+    if(containerImageAnimation.scrollLeft  >= containerImageAnimation.scrollWidth  ){
         containerImageAnimationResize()
     }
 }
