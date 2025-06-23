@@ -107,6 +107,18 @@ InputSearchHeader.addEventListener("focus", (e)=>{
 InputSearchHeader.addEventListener("focusout", (e)=>{
     searchInputIcon.style.display = "block" 
 })
+
+// 
+itemTitle.forEach((title, index) => {
+    title.addEventListener("mousemove", (e)=>{
+        if (window.innerWidth < 750){
+           let list =  document.querySelectorAll(".listContainer")[index]
+           let size = list.querySelectorAll(".listTitle").length
+           size *= 35;
+           list.style.height =  `${size}px`
+        }
+    })
+});
 // WINDOW ADD EVENET RESIZE 
 window.addEventListener('resize', (e)=>{
     if(window.innerWidth < 750){

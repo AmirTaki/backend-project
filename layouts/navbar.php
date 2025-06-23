@@ -14,7 +14,7 @@
         <!-- foreach -->
         <?php foreach($TablesMenu as $menu){ ?>
         <div class = "menuItem">
-            <div class = "itemTitle">
+            <div class = "itemTitle" style = "color:red">
                 <div><?=  $menu->title ?></div>
                 <div class = "arrowTitle"><i class="bi bi-chevron-down"></i></div>
             </div>

@@ -407,7 +407,7 @@ body::-webkit-scrollbar-thumb:hover {
         position: static;
         display: block;
         padding-top: 0;
-        height: auto;
+        height: 0;
         border: none;
         padding-left: 0;
     }
@@ -425,8 +425,8 @@ body::-webkit-scrollbar-thumb:hover {
         align-items: center;
         background-color: rgb(250, 250, 250);
         transition: height .5s, padding .5s ;
-        height: 0;
-        padding:0 10px;
+        height: 35px;
+        padding:0 20px;
     }
     .listItem:hover .listTitle{
         background-color: aliceblue;
@@ -434,10 +434,10 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
     /* HOVER ITEM TITLE:  LIST TITLE */
-    .menuItem:hover .listTitle {
+    /* .menuItem:hover .listTitle {
         padding: 10px;
         height:40px;
-    }
+    } */
     .menuItem:hover .arrowTitle{
         transform: rotate(180deg);
     }
