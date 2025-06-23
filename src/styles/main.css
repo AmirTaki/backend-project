@@ -426,7 +426,7 @@
 }
 /*  ================================================== MENU MAIN COLUMN  ===========================================================   */
 .containerMenuMain{
-    /* height: 600px; */
+    margin: 50px 0;
     background-color: transparent;
 }
 .menuConatainer{
