@@ -158,7 +158,7 @@ const changeImageMoveAnimation = () => {
     containerImageAnimation.scrollLeft += window.innerWidth - 10
     console.log(containerImageAnimation.scrollLeft)
     console.log(containerImageAnimation.scrollWidth)
-    if(containerImageAnimation.scrollLeft  >= containerImageAnimation.scrollWidth  ){
+    if(containerImageAnimation.scrollLeft  >= containerImageAnimation.scrollWidth  - window.innerWidth ){
         containerImageAnimationResize()
     }
 }
