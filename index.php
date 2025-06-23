@@ -13,6 +13,7 @@ $TableColumnImg =  readTable ("asus", "SELECT * FROM asus.column_img WHERE statu
 $backgroundTable = readTable('nike', "SELECT * FROM nike.background WHERE status = 10", $single = false, $execute = null) ;
 $titleColumnTable = readTable('nike', "SELECT * FROM nike.title_column WHERE status = 10", $single = false, $execute = null) ;
 $itemColumnTable = readTable('nike', "SELECT * FROM nike.item_column WHERE status = 10", $single = false, $execute = null) ;
+$TableBoardBlack = readTable ("adidas", "SELECT * FROM adidas.board_black WHERE status = 10", $single = false, $execute = null);
 
 ?>
 <!DOCTYPE html>
@@ -160,6 +161,7 @@ $itemColumnTable = readTable('nike', "SELECT * FROM nike.item_column WHERE statu
     <footer>
         <?php require_once "./layouts/footer.php" ?>
     </footer>
+
     <!-- header -->
     <script src = "./src/script/header.js"></script>
     <!-- main -->
