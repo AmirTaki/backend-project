@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body::-webkit-scrollbar {
     width : 10px;
     height: 5px;
@@ -345,11 +346,11 @@ body::-webkit-scrollbar-thumb:hover {
     }
     /* CLASS MENU CONTAINER  */
     .menuContainer{
-        background-color: rgb(255, 255, 255);
-        position: fixed;
+        background-color:rgb(255, 255, 255);
+        position: fixed ;
         width: 100%;
         height: 100%;
-        top: 0;
+        top: 0px ;
         left : 0;
         display: none;
         flex-flow:  column nowrap;
@@ -410,6 +411,7 @@ body::-webkit-scrollbar-thumb:hover {
         justify-content: space-between;
         background-color: transparent;
         padding: 10px;
+        background-color: white;
     }
     /* MENU ITEM : HOVER */
    .menuItem:hover .itemTitle{
@@ -427,8 +429,8 @@ body::-webkit-scrollbar-thumb:hover {
         overflow: hidden;
         position: static;
         display: block;
-        padding-top: 0;
         height: 0;
+        padding-top: 0;
         border: none;
         padding-left: 0;
         transition: height .5s;

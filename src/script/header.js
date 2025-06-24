@@ -13,16 +13,11 @@ let InputSearchHeader = document.querySelector(".InputSearchHeader")
 let menuTitle = document.querySelectorAll(".menuItem")
 
 
-const scrollHeader =  () => {
-    header.style.animation = document.documentElement.scrollTop > 100 ? "upHeader .5s linear forwards" : "downHeader .5s linear forwards"   
-}
-scrollHeader()
 
-window.addEventListener('scroll', (e)=> {
-    scrollHeader()
-})
 // MOVE ANIMATION SIDEBAR
 iconMenu.addEventListener("click", (e)=>{
+    
+    header.style.animation = 'none'
     menuContainer.style.display = "flex"
     menuContainer.style.animation = "moveSidebar .5s linear forwards"
 })
@@ -158,4 +153,12 @@ window.addEventListener('resize', (e)=>{
         // pageContainer[0].style.display = "block"//
 
     }
+})
+const scrollHeader =  () => {
+    header.style.animation = document.documentElement.scrollTop > 100 ? "upHeader .5s linear forwards" : "downHeader .5s linear forwards"   
+}
+scrollHeader()
+
+window.addEventListener('scroll', (e)=> {
+    scrollHeader()
 })

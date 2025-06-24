@@ -7,7 +7,7 @@
     <!-- LOGO -->
     <div>logo</div>
     <!-- MENU BAR -->
-    <div class = "menuContainer">
+    <div class = "menuContainer" >
         <div class = "containerClose">
             <div class = "crossSideBar"><i class="bi bi-x-lg"></i></div>
         </div>
