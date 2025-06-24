@@ -1,3 +1,4 @@
+let header = document.querySelector(".header")
 let iconMenu = document.querySelector('.iconMenu')
 let menuContainer = document.querySelector(".menuContainer")
 let itemTitle = document.querySelectorAll(".itemTitle")
@@ -11,6 +12,15 @@ let searchInputIcon = document.querySelector("#searchIcon")
 let InputSearchHeader = document.querySelector(".InputSearchHeader")
 let menuTitle = document.querySelectorAll(".menuItem")
 
+
+window.addEventListener('scroll', (e)=> {
+    if (document.documentElement.scrollTop > 100){
+        header.style.display = "none"
+    }
+    else {
+        header.style.display = "flex"
+    }
+})
 // MOVE ANIMATION SIDEBAR
 iconMenu.addEventListener("click", (e)=>{
     menuContainer.style.display = "flex"
