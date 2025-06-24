@@ -13,13 +13,13 @@ let InputSearchHeader = document.querySelector(".InputSearchHeader")
 let menuTitle = document.querySelectorAll(".menuItem")
 
 
+const scrollHeader =  () => {
+    header.style.animation = document.documentElement.scrollTop > 100 ? "upHeader .5s linear forwards" : "downHeader .5s linear forwards"   
+}
+scrollHeader()
+
 window.addEventListener('scroll', (e)=> {
-    if (document.documentElement.scrollTop > 100){
-        header.style.display = "none"
-    }
-    else {
-        header.style.display = "flex"
-    }
+    scrollHeader()
 })
 // MOVE ANIMATION SIDEBAR
 iconMenu.addEventListener("click", (e)=>{
