@@ -33,6 +33,23 @@ body::-webkit-scrollbar-thumb:hover {
     width: 100%;
     z-index: 5;
 }
+
+@keyframes downHeader {
+    0% {
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes upHeader {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+}
 /* ICON MENU */
 .iconMenu{
     display: none
