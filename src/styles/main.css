@@ -1,3 +1,6 @@
+main {
+    margin-top: 80px;
+}
 /*    =========================================================  CONTAINER GRID IMAGE : IMG   ===================================================== */
 .scroller-grid-img{
     display: flex;
