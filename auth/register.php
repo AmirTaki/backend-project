@@ -14,7 +14,9 @@
             redirect("auth/register.php?value=11");
         }
         else {
-
+            $passwordHash =  password_hash($_POST['passwordRegister'], PASSWORD_DEFAULT);
+            createAccountToUserTable ($_POST['usernameRegister'], $_POST['emailRegister'], $passwordHash, "adidas", 'users');
+            redirect("panel");
         }
 
     }
