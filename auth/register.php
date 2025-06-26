@@ -31,7 +31,20 @@
     ){
         $user = readTable ("adidas", "SELECT * FROM adidas.users WHERE email = ?", $single = true, $execute = [$_POST['emailLogin']]);
         if($user !== false){
-
+            if ($user->status === 10){
+                if(password_verify($_POST['passwordLogin'], $user->password)){
+                    redirect("panel.php");
+                }
+                else {
+                    // not password
+                    redirect("auth/register.php?value=13");
+                }
+          
+            }
+            else {
+                // not status 
+                redirect("auth/register.php?value=12");
+            }
         }
         else {
             // not email
