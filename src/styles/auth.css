@@ -1,0 +1,180 @@
+body::-webkit-scrollbar {
+    width : 10px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 80%);
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 27%);
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(0, 0%, 0%);
+    cursor: pointer;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.containerLogin{
+    background-color: white;
+    display: none;
+    flex-flow:  column nowrap;
+    justify-content: center;
+    align-items: start;
+    /* height: 100vh; */
+    margin: auto 0;
+    position: fixed;
+    width: 100%;
+
+}
+.containerRigester{
+    background-color: white;
+    display: flex;
+    flex-flow:  column nowrap;
+    justify-content: center;
+    align-items: start;
+    height: 100vh;
+    margin: auto 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    animation: containerRigesterUp 1s linear forwards ;
+}
+@keyframes containerRigesterUp{
+    0%{
+        transform: translateY(-1000px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes containerRigesterDown{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(1000px);
+    }
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    background-color: silver;
+
+}
+.lableInputContainer{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    margin: 15px auto;
+    border-radius: 10px;
+    position: relative;
+}
+span {
+    position: absolute;
+    right: 20px;
+    bottom: 18px;
+    display: none;
+}
+label, input {
+    margin: 10px;
+    color : rgb(107, 107, 107)
+}
+input {
+    margin: 10px 20px;
+    padding: 10px 0;
+    border: none;
+    outline:  none;
+    border-bottom: 1px solid rgb(107, 107, 107) ;
+}
+input:focus{
+    font-size: medium;
+}
+.lableInputContainer:nth-child(6),
+.ShowPasswordLogin
+{
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+    background-color: transparent;
+}
+
+.lableInputContainer:nth-child(6) input,
+.ShowPasswordLogin input
+{ 
+    margin-left: 0;
+}
+.lableInputContainer:nth-child(7),
+.ButtonLogin
+{
+    margin-top: 10px;
+    align-items: center;
+    background-color: transparent;
+}
+button {
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    background-color: rgb(99, 184, 253);
+    color : rgb(107, 107, 107);
+    transition: color 1s, background-color 1s;
+    border: none;
+    outline: none;
+}
+button:hover {
+    background-color: rgb(10, 134, 235);  
+    color:white;
+    cursor: pointer;
+}
+.Signlabel{
+    background-color: transparent;
+    text-align: center;
+    width: 90%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+.Signlabel label {
+    color:rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: xx-large;
+    transition: color 5s;
+} 
+.Signlabel label:hover {
+    color:white;
+}
+.ShowPasswordRegister{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: start;
+}
+.loginLabel,
+.registerLabel{
+    margin: 10px 30px; 
+    transition: color .5s;
+}
+.loginLabel:hover,
+.registerLabel:hover {
+    color: red;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width : 750px) {
+    .lableInputContainer{
+        width: 90%;
+    }
+    button{
+        width: 80%;
+    }
+    
+}
