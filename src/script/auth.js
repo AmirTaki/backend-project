@@ -88,7 +88,19 @@ const showSpan = (input, span) => {
 }
 // CHECK USER NAME
 const checkUserName = (username, index) => {
-    vlauesInput[index] = username.value 
+    const save = (message, index) => {
+        if (message === "Name is requierd"){
+            return vlauesInput[index]
+        }
+        else if(message === "Write full Name"){
+            return vlauesInput[index]
+        }
+        else {
+            return message
+        }
+    }
+    vlauesInput[index] = save(username.value, index )
+    console.log( vlauesInput)
     if(username.value.length === 0){
         username.value = "Name is requierd"
         username.style.color = "red"
@@ -190,7 +202,6 @@ const checkEmailLogin = (email, index) => {
 
     }
     vlauesInput[index] = save(email.value, index )
-    console.log( vlauesInput)
     if (email.value.length === 0){
         email.value = "Email is required"
         email.style.color = "red"
