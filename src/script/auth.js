@@ -100,7 +100,6 @@ const checkUserName = (username, index) => {
         }
     }
     vlauesInput[index] = save(username.value, index )
-    console.log( vlauesInput)
     if(username.value.length === 0){
         username.value = "Name is requierd"
         username.style.color = "red"
@@ -121,7 +120,18 @@ const checkUserName = (username, index) => {
 }
 // CHECK EMAIL
 const checkEmail = (email, index,) => {
-    vlauesInput[index] = email.value 
+    const save = (message, index) => {
+        if (message === "Email is required"){
+            return vlauesInput[index]
+        }
+        else if(message === "Write full Email"){
+            return vlauesInput[index]
+        }
+        else {
+            return message
+        }
+    }
+    vlauesInput[index] = save(email.value, index )
     if(email.value.length === 0){
         email.value = "Email is required"
         email.style.color = "red"
@@ -142,7 +152,18 @@ const checkEmail = (email, index,) => {
 }
 // CHECK PASSWORD
 const checkPassowrd = (password, index ) =>{
-    vlauesInput[index] = password.value 
+    const save = (message, index) => {
+        if (message === "Password is required"){
+            return vlauesInput[index]
+        }
+        else if(message === "Password should contain 1Uppercase, 1Lowecase, 1 Digit & 1Alphabet "){
+            return vlauesInput[index]
+        }
+        else {
+            return message
+        }
+    }
+    vlauesInput[index] = save(password.value, index )
     if(password.value.length === 0){
         password.type = 'text'
         password.value = "Password is required"
