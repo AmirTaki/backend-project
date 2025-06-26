@@ -4,7 +4,9 @@
     // REGISTER
     if (
         isset($_POST["usernameRegister"]) and $_POST['usernameRegister'] !== "" and (preg_match("/^[A-Za-z]*\s{1}[A-Za-z]*$/",$_POST['usernameRegister'])) &&
-        isset($_POST[''])
+        isset($_POST['emailRegister']) and $_POST['emailRegister'] !== "" and (preg_grep("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/", $_POST['emailRegister'])) &&
+        isset($_POST['passwordRegister']) and $_POST['passwordRegister'] !== "" and (preg_match("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/",$, $_POST['passwordRegister'])) &&
+        isset($_POST['password-confirmRegister']) and $_POST['password-confirmRegister'] !== "" and (preg_match("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/",$, $_POST['password-confirmRegister'])) 
     )
 ?>
 <!DOCTYPE html>
