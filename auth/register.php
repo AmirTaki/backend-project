@@ -13,31 +13,31 @@
 <body>
         <div class = "containerRigester">
         <div class = "loginLabel">Login</div>
-        <form action="">
+        <form action="<?= url("panel.php") ?>">
             <div class = "Signlabel">
                 <label>SING UP</label>
             </div>
             <div class = "lableInputContainer">
                 <label for="usernameRegister">USERNAME</label>
-                <input type="text" id = "usernameRegister" placeholder="Enter the name family ?" >
+                <input type="text" id = "usernameRegister" placeholder="Enter the name family ?" name = "usernameRegister" >
                 <span>❌</span>
                 <span>✅</span>
             </div>
             <div class = "lableInputContainer">
                 <label for="emailRegister">EMAIL</label>
-                <input type="email" id = "emailRegister" placeholder="Enter the Email ? ">
+                <input type="email" id = "emailRegister" placeholder="Enter the Email ? " name = "emailRegister">
                 <span>❌</span>
                 <span>✅</span>
             </div>
             <div class = "lableInputContainer">
                 <label for="passwordRegister">PASSWORD</label>
-                <input type="password" id = "passwordRegister" placeholder="Enter the Password?">
+                <input type="password" id = "passwordRegister" placeholder="Enter the Password?" name = "passwordRegister">
                 <span>❌</span>
                 <span>✅</span>
             </div>
             <div class = "lableInputContainer">
                 <label for="passwordRepeatRegister">PASSWORD CONFIRM</label>
-                <input type="password" id = "passwordRepeatRegister" placeholder="Enter the Password confirm?">
+                <input type="password" id = "passwordRepeatRegister" placeholder="Enter the Password confirm?" name = "password-confirmRegister">
                 <span>❌</span>
                 <span>✅</span>
             </div>        
