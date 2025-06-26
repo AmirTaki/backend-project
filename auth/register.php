@@ -1,6 +1,11 @@
 <?php 
     require_once "../functions/helprs.php";
     require_once "../functions/pdo_connection.php";
+    // REGISTER
+    if (
+        isset($_POST["usernameRegister"]) and $_POST['usernameRegister'] !== "" and (preg_match("/^[A-Za-z]*\s{1}[A-Za-z]*$/",$_POST['usernameRegister'])) &&
+        isset($_POST[''])
+    )
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +18,7 @@
 <body>
         <div class = "containerRigester">
         <div class = "loginLabel">Login</div>
-        <form action="<?= url("panel.php") ?>">
+        <form action="<?= url("panel.php") ?>" method = "post">
             <div class = "Signlabel">
                 <label>SING UP</label>
             </div>
