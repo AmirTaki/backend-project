@@ -127,6 +127,9 @@ const checkEmail = (email, index,) => {
         else if(message === "Write full Email"){
             return vlauesInput[index]
         }
+        else if(message === "This email has already been registered!"){
+            return vlauesInput[index]
+        }
         else {
             return message
         }
@@ -205,8 +208,8 @@ const checkConfirmPassword = (password, indexPassword, confirm, indexConfirm) =>
 }
 // BUTTON REGISTER
 ButtonRegister.addEventListener("click", (e)=>{
-    // const flag =  checkUserName(usernameRegister, 0 ) && checkEmail(emailRegister, 1)  && checkPassowrd(passwordRegister, 2) &&  checkPassowrd(passwordRepeatRegister, 3) && checkConfirmPassword(passwordRegister, 2,  passwordRepeatRegister, 3)
-    // flag ? "" : e.preventDefault()        
+    const flag =  checkUserName(usernameRegister, 0 ) && checkEmail(emailRegister, 1)  && checkPassowrd(passwordRegister, 2) &&  checkPassowrd(passwordRepeatRegister, 3) && checkConfirmPassword(passwordRegister, 2,  passwordRepeatRegister, 3)
+    flag ? "" : e.preventDefault()        
 })
 // CHECK EMAIL lOGIN 
 const checkEmailLogin = (email, index) => {
