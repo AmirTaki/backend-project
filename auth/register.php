@@ -142,12 +142,26 @@
     <?php 
         if($_GET['value'] == 11) {
     ?>
-    <script>
-        value = 11
-    </script>
+        <script>
+            value = 11
+        </script>
     <?php 
         }
     ?>
+    <?php
+        elseif($_GET['value'] == 12){
+    ?>
+        <script>
+            value = 12
+        </script>
+    <?php } ?>
+    <?php  
+        elseif($_GET['value'] == 13){
+    ?>
+        <script>
+            value = 13
+        </script>
+    <?php } ?>
     <script>
         if(value == 11){
             document.getElementById('emailRegister').value = "This email has already been registered!"
