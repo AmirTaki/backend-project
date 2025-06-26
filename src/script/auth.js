@@ -205,8 +205,8 @@ const checkConfirmPassword = (password, indexPassword, confirm, indexConfirm) =>
 }
 // BUTTON REGISTER
 ButtonRegister.addEventListener("click", (e)=>{
-    const flag =  checkUserName(usernameRegister, 0 ) && checkEmail(emailRegister, 1)  && checkPassowrd(passwordRegister, 2) &&  checkPassowrd(passwordRepeatRegister, 3) && checkConfirmPassword(passwordRegister, 2,  passwordRepeatRegister, 3)
-    flag ? "" : e.preventDefault()        
+    // const flag =  checkUserName(usernameRegister, 0 ) && checkEmail(emailRegister, 1)  && checkPassowrd(passwordRegister, 2) &&  checkPassowrd(passwordRepeatRegister, 3) && checkConfirmPassword(passwordRegister, 2,  passwordRepeatRegister, 3)
+    // flag ? "" : e.preventDefault()        
 })
 // CHECK EMAIL lOGIN 
 const checkEmailLogin = (email, index) => {

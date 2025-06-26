@@ -3,20 +3,20 @@
     require_once "../functions/pdo_connection.php";
     // REGISTER
     if (
-        isset($_POST["usernameRegister"]) and $_POST['usernameRegister'] !== "" and (preg_match("/^[A-Za-z]*\s{1}[A-Za-z]*$/",$_POST['usernameRegister'])) &&
-        isset($_POST['emailRegister']) and $_POST['emailRegister'] !== "" and (preg_grep("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/", $_POST['emailRegister'])) &&
-        isset($_POST['passwordRegister']) and $_POST['passwordRegister'] !== "" and (preg_match("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/",$, $_POST['passwordRegister'])) &&
-        isset($_POST['password-confirmRegister']) and $_POST['password-confirmRegister'] !== "" and (preg_match("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/",$, $_POST['password-confirmRegister'])) 
+        isset($_POST["usernameRegister"]) and $_POST['usernameRegister'] !== "" and (preg_match("/^[A-Za-z]*\s{1}[A-Za-z]*$/",$_POST['usernameRegister'])) and
+        isset($_POST['emailRegister']) and $_POST['emailRegister'] !== "" and (preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/", $_POST['emailRegister'])) and
+        isset($_POST['passwordRegister']) and $_POST['passwordRegister'] !== "" and (preg_match("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/", $_POST['passwordRegister'])) and
+        isset($_POST['password-confirmRegister']) and $_POST['password-confirmRegister'] !== "" and (preg_match("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/", $_POST['password-confirmRegister'])) 
     )
     if ($_POST['passwordRegister'] === $_POST['password-confirmRegister']){
-        createUserTable("adidas")
+        createUserTable("adidas");
         if(readTable ("adidas", "SELECT * FROM adidas.users WHERE email = ?", $single = true, $execute = [$_POST['emailRegister']])){
             redirect("auth/register.php?value=11");
         }
         else {
             $passwordHash =  password_hash($_POST['passwordRegister'], PASSWORD_DEFAULT);
             createAccountToUserTable ($_POST['usernameRegister'], $_POST['emailRegister'], $passwordHash, "adidas", 'users');
-            redirect("panel");
+            redirect("panel.php");
         }
 
     }
