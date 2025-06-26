@@ -106,5 +106,24 @@
         </form>
     </div>
     <script src = "../src/script/auth.js"></script>
+    <script>
+        let value = 0;
+    </script>
+    <?php 
+        if($_GET['value'] == 11) {
+    ?>
+    <script>
+        value = 11
+    </script>
+    <?php 
+        }
+    ?>
+    <script>
+        if(value == 11){
+            document.getElementById('emailRegister').value = "This email has already been registered!"
+            document.getElementById('emailRegister').style.color = 'orange'
+        }
+    </script>
+
 </body>
 </html>
