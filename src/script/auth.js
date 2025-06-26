@@ -177,7 +177,20 @@ ButtonRegister.addEventListener("click", (e)=>{
 })
 // CHECK EMAIL lOGIN 
 const checkEmailLogin = (email, index) => {
-    vlauesInput[index] = email.value
+    const save = (message, index) => {
+        if (message === "Email is required"){
+            return vlauesInput[index]
+        }
+        else if(message === "Write full Email"){
+            return vlauesInput[index]
+        }
+        else {
+            return message
+        }
+
+    }
+    vlauesInput[index] = save(email.value, index )
+    console.log( vlauesInput)
     if (email.value.length === 0){
         email.value = "Email is required"
         email.style.color = "red"
