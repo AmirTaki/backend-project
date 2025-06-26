@@ -41,13 +41,13 @@
             </div>
             <div class = "lableInputContainer">
                 <label for="usernameRegister">USERNAME</label>
-                <input type="text" id = "usernameRegister" placeholder="Enter the name family ?" name = "usernameRegister" >
+                <input type="text" id = "usernameRegister" placeholder="Enter the name family ?" name = "usernameRegister"  >
                 <span>❌</span>
                 <span>✅</span>
             </div>
             <div class = "lableInputContainer">
                 <label for="emailRegister">EMAIL</label>
-                <input type="email" id = "emailRegister" placeholder="Enter the Email ? " name = "emailRegister">
+                <input type="email" id = "emailRegister" placeholder="Enter the Email ? " name = "emailRegister" >
                 <span>❌</span>
                 <span>✅</span>
             </div>

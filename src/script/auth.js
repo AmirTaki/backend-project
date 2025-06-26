@@ -31,7 +31,7 @@ inputs.forEach((input, index) => {
         if(showPasswordLogin.checked === false){
             passwordLogin.type = "password"
         }
-        if (input.style.color === "red"){
+        if (input.style.color === "red" || input.style.color === "orange"){
             input.value = vlauesInput[index]
             input.style.color = "rgb(107, 107, 107)"   
         }
@@ -46,7 +46,7 @@ inputs.forEach((input, index) => {
         if(showPasswordLogin.checked === false){
             passwordLogin.type = "password"
         }
-        if (input.style.color === "red"){
+        if (input.style.color === "red" || input.style.color === "orange"){
             input.value = vlauesInput[index]
             input.style.color = "rgb(107, 107, 107)"   
         }
