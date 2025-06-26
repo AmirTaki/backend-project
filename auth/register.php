@@ -29,7 +29,14 @@
         isset($_POST['emailLogin']) and $_POST['emailLogin'] !== "" and
         isset($_POST['passwordLogin']) and $_POST["passwordLogin"] !== ''
     ){
-        if()
+        $user = readTable ("adidas", "SELECT * FROM adidas.users WHERE email = ?", $single = true, $execute = [$_POST['emailLogin']]);
+        if($user !== false){
+
+        }
+        else {
+            // not email
+            redirect("auth/register.php?value=13");
+        }
     }
         
 
