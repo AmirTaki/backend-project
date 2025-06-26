@@ -167,6 +167,16 @@
             document.getElementById('emailRegister').value = "This email has already been registered!"
             document.getElementById('emailRegister').style.color = 'orange'
         }
+        else if(value == 12){
+            document.getElementById('emailLogin').value = "You are not allowed to access."
+            document.getElementById('emailLogin').style.color = 'orange'
+        }
+        else if(value == 13){
+            document.getElementById('emailLogin').value = "You entered the wrong email."
+            document.getElementById('emailLogin').style.color = 'red'
+            document.getElementById('passwordLogin').value = "You entered the wrong password."
+            document.getElementById('passwordLogin').style.color = 'red'
+        }
     </script>
 
 </body>
