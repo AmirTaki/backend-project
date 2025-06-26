@@ -23,6 +23,16 @@
     else {
         redirect("");
     }
+
+    // login
+    if(
+        isset($_POST['emailLogin']) and $_POST['emailLogin'] !== "" and
+        isset($_POST['passwordLogin']) and $_POST["passwordLogin"] !== ''
+    ){
+        if()
+    }
+        
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
