@@ -8,6 +8,19 @@
         isset($_POST['passwordRegister']) and $_POST['passwordRegister'] !== "" and (preg_match("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/",$, $_POST['passwordRegister'])) &&
         isset($_POST['password-confirmRegister']) and $_POST['password-confirmRegister'] !== "" and (preg_match("/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/",$, $_POST['password-confirmRegister'])) 
     )
+    if ($_POST['passwordRegister'] === $_POST['password-confirmRegister']){
+        createUserTable("adidas")
+        if(readTable ("adidas", "SELECT * FROM adidas.users WHERE email = ?", $single = true, $execute = [$_POST['emailRegister']])){
+            redirect("auth/register.php?value=11");
+        }
+        else {
+
+        }
+
+    }
+    else {
+        redirect("");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +33,7 @@
 <body>
         <div class = "containerRigester">
         <div class = "loginLabel">Login</div>
-        <form action="<?= url("panel.php") ?>" method = "post">
+        <form action="<?= url("auth/register.php?value=") ?>" method = "post">
             <div class = "Signlabel">
                 <label>SING UP</label>
             </div>
