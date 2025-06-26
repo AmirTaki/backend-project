@@ -76,21 +76,21 @@
     </div>
     <div class = "containerLogin">
         <div class = "registerLabel">Register</div>
-          <form action="">
+          <form action="<?=  url("auth/register.php?value=") ?>" method = "post">
             <div class = "Signlabel">
                 <label>LOGIN</label>
             </div>
      
             <div class = "lableInputContainer">
                 <label for="emailLogin">EMAIL</label>
-                <input type="email" id = "emailLogin" placeholder="Enter the Email ? ">
+                <input type="email" id = "emailLogin" placeholder="Enter the Email ? " name = "emailLogin">
                 <span>❌</span>
                 <span>✅</span>
             </div>
 
             <div class = "lableInputContainer">
                 <label for="passwordLogin">PASSWORD </label>
-                <input type="password" id = "passwordLogin" placeholder="Enter the Password confirm?">
+                <input type="password" id = "passwordLogin" placeholder="Enter the Password confirm?" name = "passwordLogin">
                 <span>❌</span>
                 <span>✅</span>
             </div>      
