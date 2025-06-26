@@ -12,6 +12,11 @@ let searchInputIcon = document.querySelector("#searchIcon")
 let InputSearchHeader = document.querySelector(".InputSearchHeader")
 let menuTitle = document.querySelectorAll(".menuItem")
 
+const changaBackgroundList = () => {
+    listTitle.forEach(list => {
+    list.style.backgroundColor = "transparent"
+})
+}
 
 
 // MOVE ANIMATION SIDEBAR
@@ -65,6 +70,7 @@ for(let i = 0; i < listTitle.length; i++){
         }
     })
 }
+
 // MOVE REVERSE ANIMATION CONATAINER PAGE SIDEBAR
 for(let i = 0; i < backCountaienr.length; i++){
     backCountaienr[i].addEventListener("click", (e)=>{
@@ -146,6 +152,7 @@ window.addEventListener('resize', (e)=>{
         sizeHeaderListContanier(0) 
         menuContainer.style.display = "none"
         closePageContainerSidebar()//
+        changaBackgroundList()
     }
     else {
         sizeHeaderListContanier("600px")

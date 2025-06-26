@@ -453,7 +453,7 @@ body::-webkit-scrollbar-thumb:hover {
         padding:0 20px;
     }
     .listItem:hover .listTitle{
-        background-color: aliceblue;
+        background-color: aliceblue !important;
         color: rgb(44, 44, 44);
     }
 
