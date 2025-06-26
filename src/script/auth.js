@@ -220,10 +220,15 @@ const checkEmailLogin = (email, index) => {
         else if(message === "Write full Email"){
             return vlauesInput[index]
         }
+        else if (message === "You are not allowed to access."){
+            return vlauesInput[index]
+        }
+        else if (message === "You entered the wrong email."){
+            return vlauesInput[index]
+        }
         else {
             return message
         }
-
     }
     vlauesInput[index] = save(email.value, index )
     if (email.value.length === 0){

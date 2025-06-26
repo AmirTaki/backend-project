@@ -31,7 +31,7 @@
     ){
         $user = readTable ("adidas", "SELECT * FROM adidas.users WHERE email = ?", $single = true, $execute = [$_POST['emailLogin']]);
         if($user !== false){
-            if ($user->status === 10){
+            if ($user->status == 10){
                 if(password_verify($_POST['passwordLogin'], $user->password)){
                     redirect("panel.php");
                 }
@@ -147,16 +147,14 @@
         </script>
     <?php 
         }
-    ?>
-    <?php
-        elseif($_GET['value'] == 12){
+        else if($_GET['value'] == 12){
     ?>
         <script>
             value = 12
         </script>
-    <?php } ?>
-    <?php  
-        elseif($_GET['value'] == 13){
+    <?php 
+        }   
+        else if($_GET['value'] == 13){
     ?>
         <script>
             value = 13
@@ -176,6 +174,8 @@
             document.getElementById('emailLogin').style.color = 'red'
             document.getElementById('passwordLogin').value = "You entered the wrong password."
             document.getElementById('passwordLogin').style.color = 'red'
+            document.getElementById('passwordLogin').type = 'text'
+
         }
     </script>
 
