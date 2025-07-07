@@ -23,12 +23,15 @@ const changaBackgroundList = () => {
 iconMenu.addEventListener("click", (e)=>{
     
     header.style.animation = 'none'
+    document.documentElement.style.overflow = "hidden";
     menuContainer.style.display = "flex"
     menuContainer.style.animation = "moveSidebar .5s linear forwards"
 })
 // REVERSE MOVE ANIMATIO SIDEBAR
 crossSideBar.addEventListener("click", (e)=>{
     menuContainer.style.animation = "moveReverseSidebar .5s linear forwards"
+    document.documentElement.style.overflow = "auto";
+
 })
 // ClosePageContainer & changaBackground listTitle
 function ClosePageContainer () {
@@ -148,6 +151,7 @@ const sizeHeaderListContanier = (height) => {
 
 // WINDOW ADD EVENET RESIZE 
 window.addEventListener('resize', (e)=>{
+    document.documentElement.style.overflow = "auto";
     if(window.innerWidth < 750){
         sizeHeaderListContanier(0) 
         menuContainer.style.display = "none"
